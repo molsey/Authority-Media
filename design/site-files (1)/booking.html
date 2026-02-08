@@ -1,0 +1,311 @@
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Blueprint Call | Authority Media Network</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Inter', sans-serif; }
+.font-serif { font-family: 'Playfair Display', serif; }
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { bg-neutral-900; }
+::-webkit-scrollbar-thumb { background-color: #333; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background-color: #555; }
+
+/* Calendar Styles */
+.calendar-day:hover:not(.disabled) { background-color: rgba(255,255,255,0.1); cursor: pointer; }
+.calendar-day.selected { background-color: #ea580c; color: white; border-color: #ea580c; }
+.time-slot:hover { border-color: #ea580c; background-color: rgba(234, 88, 12, 0.1); color: white; }
+.time-slot.selected { background-color: #ea580c; border-color: #ea580c; color: white; }
+
+/* Fade Up Animation */
+.fade-up {
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-up.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+/* Marquee */
+@keyframes scroll {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+.animate-scroll {
+animation: scroll 30s linear infinite;
+}
+</style></head>
+<body class="bg-neutral-950 text-neutral-400 antialiased selection:bg-orange-500/20 selection:text-orange-200 min-h-screen flex flex-col">
+
+    <!-- Simple Navigation -->
+    <nav class="w-full border-b border-white/5 bg-neutral-950/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-white font-medium tracking-tighter text-lg uppercase hover:text-orange-500 transition-colors">
+                AMN.
+            </a>
+            <a href="#" class="text-xs font-medium text-neutral-500 hover:text-white transition-colors flex items-center gap-2">
+                <iconify-icon icon="solar:arrow-left-linear"></iconify-icon>
+                Back to Website
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Booking Section -->
+    <main class="flex-grow flex items-center justify-center py-12 lg:py-20 px-4 sm:px-6 relative overflow-hidden">
+        <!-- Background Glows -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-900/10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-6xl w-full mx-auto grid lg:grid-cols-12 gap-8 lg:gap-16 items-start relative z-10">
+            
+            <!-- Left Column: Value Proposition & Details -->
+            <div class="lg:col-span-5 fade-up">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/20 bg-orange-500/5 mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                    </span>
+                    <span class="text-xs font-medium text-orange-500 tracking-wide uppercase">Limited Availability</span>
+                </div>
+
+                <h1 class="text-3xl lg:text-4xl font-medium text-white tracking-tight mb-4">
+                    Authority Blueprint <span class="font-serif italic text-neutral-500">Strategy Call</span>
+                </h1>
+                
+                <p class="text-neutral-400 font-light text-lg mb-8 leading-relaxed">
+                    This isn't a sales pitch. It's a diagnostic session to map out your path from expert to authority.
+                </p>
+
+                <div class="space-y-6 mb-10">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-neutral-900 border border-white/10 flex items-center justify-center text-white flex-shrink-0">
+                            <iconify-icon icon="solar:clock-circle-bold" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-medium text-sm">30 Minutes</h3>
+                            <p class="text-xs text-neutral-500 mt-1">Focused strategy session via Zoom.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-neutral-900 border border-white/10 flex items-center justify-center text-white flex-shrink-0">
+                            <iconify-icon icon="solar:chart-2-bold" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-medium text-sm">Positioning Audit</h3>
+                            <p class="text-xs text-neutral-500 mt-1">We'll review your current digital footprint and identify gaps.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-neutral-900 border border-white/10 flex items-center justify-center text-white flex-shrink-0">
+                            <iconify-icon icon="solar:map-point-bold" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-medium text-sm">Custom Roadmap</h3>
+                            <p class="text-xs text-neutral-500 mt-1">Walk away with a 4-step plan to 10x your authority.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trusted By / Social Proof -->
+                <div class="pt-8 border-t border-white/5">
+                    <p class="text-xs font-medium text-neutral-600 uppercase tracking-widest mb-4">Trusted by founders from</p>
+                    <div class="flex flex-wrap gap-6 opacity-40 grayscale">
+                         <span class="text-sm font-serif font-bold text-white">Forbes</span>
+                         <span class="text-sm font-sans font-bold text-white tracking-tighter">Inc.</span>
+                         <span class="text-sm font-serif italic text-white">Entrepreneur</span>
+                         <span class="text-sm font-bold text-white">Y Combinator</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Calendar Widget -->
+            <div class="lg:col-span-7 fade-up delay-100">
+                <div class="bg-neutral-900/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row h-full min-h-[500px]">
+                    
+                    <!-- Date Picker Side -->
+                    <div class="p-6 md:p-8 flex-1 border-b md:border-b-0 md:border-r border-white/5">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-white font-medium">Select a Date</h3>
+                            <div class="flex gap-1">
+                                <button class="w-8 h-8 rounded-full hover:bg-white/5 flex items-center justify-center text-neutral-400 hover:text-white transition-colors">
+                                    <iconify-icon icon="solar:alt-arrow-left-linear"></iconify-icon>
+                                </button>
+                                <span class="text-sm text-white font-medium self-center px-2">October 2023</span>
+                                <button class="w-8 h-8 rounded-full hover:bg-white/5 flex items-center justify-center text-neutral-400 hover:text-white transition-colors">
+                                    <iconify-icon icon="solar:alt-arrow-right-linear"></iconify-icon>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Calendar Grid -->
+                        <div class="grid grid-cols-7 gap-1 mb-2 text-center">
+                            <span class="text-[10px] uppercase text-neutral-600 font-medium py-2">Mon</span>
+                            <span class="text-[10px] uppercase text-neutral-600 font-medium py-2">Tue</span>
+                            <span class="text-[10px] uppercase text-neutral-600 font-medium py-2">Wed</span>
+                            <span class="text-[10px] uppercase text-neutral-600 font-medium py-2">Thu</span>
+                            <span class="text-[10px] uppercase text-neutral-600 font-medium py-2">Fri</span>
+                            <span class="text-[10px] uppercase text-neutral-600 font-medium py-2 text-orange-900/50">Sat</span>
+                            <span class="text-[10px] uppercase text-neutral-600 font-medium py-2 text-orange-900/50">Sun</span>
+                        </div>
+                        
+                        <div class="grid grid-cols-7 gap-1 text-center text-sm">
+                            <!-- Empty Days -->
+                            <span class="p-3"></span><span class="p-3"></span>
+                            <!-- Days -->
+                            <button class="calendar-day p-3 rounded-lg text-neutral-500 hover:text-neutral-300 transition-all disabled cursor-not-allowed opacity-30">1</button>
+                            <button class="calendar-day p-3 rounded-lg text-neutral-500 hover:text-neutral-300 transition-all disabled cursor-not-allowed opacity-30">2</button>
+                            <button class="calendar-day p-3 rounded-lg text-neutral-500 hover:text-neutral-300 transition-all disabled cursor-not-allowed opacity-30">3</button>
+                            <span class="p-3 text-neutral-800">4</span>
+                            <span class="p-3 text-neutral-800">5</span>
+                            
+                            <button class="calendar-day p-3 rounded-lg text-neutral-500 hover:text-neutral-300 transition-all disabled cursor-not-allowed opacity-30">6</button>
+                            <button class="calendar-day p-3 rounded-lg text-neutral-500 hover:text-neutral-300 transition-all disabled cursor-not-allowed opacity-30">7</button>
+                            <button class="calendar-day p-3 rounded-lg text-neutral-500 hover:text-neutral-300 transition-all disabled cursor-not-allowed opacity-30">8</button>
+                            <button class="calendar-day p-3 rounded-lg text-white font-medium bg-neutral-800 border border-white/10 hover:border-orange-500/50 transition-all">9</button>
+                            <button class="calendar-day p-3 rounded-lg text-white font-medium bg-neutral-800 border border-white/10 hover:border-orange-500/50 transition-all">10</button>
+                            <span class="p-3 text-neutral-800">11</span>
+                            <span class="p-3 text-neutral-800">12</span>
+
+                            <button class="calendar-day p-3 rounded-lg text-white font-medium bg-neutral-800 border border-white/10 hover:border-orange-500/50 transition-all">13</button>
+                            <button class="calendar-day p-3 rounded-lg text-white font-medium bg-neutral-800 border border-white/10 hover:border-orange-500/50 transition-all">14</button>
+                            <button class="calendar-day selected p-3 rounded-lg transition-all shadow-lg shadow-orange-500/20">15</button>
+                            <button class="calendar-day p-3 rounded-lg text-white font-medium bg-neutral-800 border border-white/10 hover:border-orange-500/50 transition-all">16</button>
+                            <button class="calendar-day p-3 rounded-lg text-white font-medium bg-neutral-800 border border-white/10 hover:border-orange-500/50 transition-all">17</button>
+                            <span class="p-3 text-neutral-800">18</span>
+                            <span class="p-3 text-neutral-800">19</span>
+                            
+                            <button class="calendar-day p-3 rounded-lg text-white font-medium bg-neutral-800 border border-white/10 hover:border-orange-500/50 transition-all">20</button>
+                            <button class="calendar-day p-3 rounded-lg text-white font-medium bg-neutral-800 border border-white/10 hover:border-orange-500/50 transition-all">21</button>
+                            <button class="calendar-day p-3 rounded-lg text-white font-medium bg-neutral-800 border border-white/10 hover:border-orange-500/50 transition-all">22</button>
+                            <button class="calendar-day p-3 rounded-lg text-white font-medium bg-neutral-800 border border-white/10 hover:border-orange-500/50 transition-all">23</button>
+                            <button class="calendar-day p-3 rounded-lg text-white font-medium bg-neutral-800 border border-white/10 hover:border-orange-500/50 transition-all">24</button>
+                            <span class="p-3 text-neutral-800">25</span>
+                            <span class="p-3 text-neutral-800">26</span>
+                            
+                            <!-- Last row truncated for design -->
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-white/5">
+                            <div class="flex items-center gap-2 text-xs text-neutral-500">
+                                <iconify-icon icon="solar:globe-linear"></iconify-icon>
+                                <span>Timezone: America/New_York (EDT)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Time Slots Side -->
+                    <div class="w-full md:w-64 bg-neutral-950/50 p-6 md:p-8 flex flex-col">
+                        <h3 class="text-white font-medium mb-1">Wednesday, Oct 15</h3>
+                        <p class="text-xs text-neutral-500 mb-6">30 min slots available</p>
+
+                        <div class="flex-grow space-y-3 overflow-y-auto max-h-[300px] pr-2 custom-scrollbar">
+                            <button class="time-slot w-full text-left px-4 py-3 rounded-lg border border-white/5 bg-neutral-900 text-sm text-neutral-300 transition-all flex justify-between items-center group">
+                                09:00 AM
+                                <iconify-icon icon="solar:arrow-right-linear" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0"></iconify-icon>
+                            </button>
+                            <button class="time-slot w-full text-left px-4 py-3 rounded-lg border border-white/5 bg-neutral-900 text-sm text-neutral-300 transition-all flex justify-between items-center group">
+                                09:30 AM
+                                <iconify-icon icon="solar:arrow-right-linear" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0"></iconify-icon>
+                            </button>
+                            <button class="time-slot selected w-full text-left px-4 py-3 rounded-lg border transition-all flex justify-between items-center shadow-[0_0_15px_rgba(234,88,12,0.3)]">
+                                10:00 AM
+                                <iconify-icon icon="solar:check-circle-bold" class="text-white"></iconify-icon>
+                            </button>
+                            <button class="time-slot w-full text-left px-4 py-3 rounded-lg border border-white/5 bg-neutral-900 text-sm text-neutral-300 transition-all flex justify-between items-center group">
+                                10:30 AM
+                                <iconify-icon icon="solar:arrow-right-linear" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0"></iconify-icon>
+                            </button>
+                            <button class="time-slot w-full text-left px-4 py-3 rounded-lg border border-white/5 bg-neutral-900 text-sm text-neutral-300 transition-all flex justify-between items-center group">
+                                01:00 PM
+                                <iconify-icon icon="solar:arrow-right-linear" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0"></iconify-icon>
+                            </button>
+                            <button class="time-slot w-full text-left px-4 py-3 rounded-lg border border-white/5 bg-neutral-900 text-sm text-neutral-300 transition-all flex justify-between items-center group">
+                                01:30 PM
+                                <iconify-icon icon="solar:arrow-right-linear" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0"></iconify-icon>
+                            </button>
+                             <button class="time-slot w-full text-left px-4 py-3 rounded-lg border border-white/5 bg-neutral-900 text-sm text-neutral-300 transition-all flex justify-between items-center group">
+                                03:00 PM
+                                <iconify-icon icon="solar:arrow-right-linear" class="opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0"></iconify-icon>
+                            </button>
+                        </div>
+                        
+                        <button class="mt-4 w-full bg-orange-600 text-white py-3 rounded-md text-sm font-medium hover:bg-orange-500 transition-all shadow-[0_0_20px_rgba(234,88,12,0.2)]">
+                            Confirm Time
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Preparation Section -->
+    <section class="border-t border-white/5 bg-neutral-900/30 py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-medium text-white mb-12">What happens next?</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-left relative">
+                <!-- Connecting Line -->
+                <div class="hidden md:block absolute top-6 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+                <div class="relative z-10">
+                    <div class="w-12 h-12 bg-neutral-950 border border-white/10 rounded-full flex items-center justify-center text-orange-500 mb-6 mx-auto md:mx-0 shadow-lg shadow-orange-900/10">
+                        <span class="font-mono font-bold">01</span>
+                    </div>
+                    <h3 class="text-white font-medium mb-2 text-center md:text-left">Preparation</h3>
+                    <p class="text-sm text-neutral-500 leading-relaxed text-center md:text-left">We'll send you a brief questionnaire to understand your current brand status before we meet.</p>
+                </div>
+
+                <div class="relative z-10">
+                    <div class="w-12 h-12 bg-neutral-950 border border-white/10 rounded-full flex items-center justify-center text-white mb-6 mx-auto md:mx-0">
+                        <span class="font-mono font-bold">02</span>
+                    </div>
+                    <h3 class="text-white font-medium mb-2 text-center md:text-left">The Blueprint</h3>
+                    <p class="text-sm text-neutral-500 leading-relaxed text-center md:text-left">During the call, we map out the "Contact, Capture, Convert" strategy specifically for your niche.</p>
+                </div>
+
+                <div class="relative z-10">
+                    <div class="w-12 h-12 bg-neutral-950 border border-white/10 rounded-full flex items-center justify-center text-white mb-6 mx-auto md:mx-0">
+                        <span class="font-mono font-bold">03</span>
+                    </div>
+                    <h3 class="text-white font-medium mb-2 text-center md:text-left">Execution</h3>
+                    <p class="text-sm text-neutral-500 leading-relaxed text-center md:text-left">You receive the recording and the roadmap. If we're a good fit, we discuss partnership.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="py-8 border-t border-white/5 bg-neutral-950">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-xs text-neutral-600">
+            <span>© 2024 Authority Media Network.</span>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body></html>

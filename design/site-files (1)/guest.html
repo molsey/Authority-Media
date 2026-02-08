@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guest Profile - Authority Media Network</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Inter', sans-serif; }
+.font-serif { font-family: 'Playfair Display', serif; }
+/* Custom scrollbar hide */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+/* Fade Up Animation Classes */
+.fade-up {
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+will-change: opacity, transform;
+}
+.fade-up.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+</style></head>
+<body class="bg-neutral-950 text-neutral-400 antialiased selection:bg-orange-500/20 selection:text-orange-200 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="text-white font-medium tracking-tighter text-xl uppercase group hover:text-orange-500 transition-colors z-50 relative">
+                AMN.
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-normal">
+                <a href="#" class="text-white/60 hover:text-white transition-colors">Podcast</a>
+                <a href="#" class="text-white/60 hover:text-white transition-colors">Magazine</a>
+                <span class="text-neutral-700">/</span>
+                <span class="text-white">Guest Profiles</span>
+            </div>
+
+            <!-- CTA -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#" class="group flex items-center gap-2 bg-white/5 border border-white/10 text-white px-4 py-2 rounded text-xs font-medium hover:bg-white/10 transition-all">
+                    All Episodes
+                    <iconify-icon icon="solar:list-linear" class="transition-transform"></iconify-icon>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Icon -->
+            <button class="md:hidden text-white hover:text-orange-500 transition-colors">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24"></iconify-icon>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Guest Hero Profile -->
+    <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
+        <!-- Background Blur -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-900/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Breadcrumb -->
+            <div class="fade-up flex items-center gap-2 text-xs text-neutral-500 mb-8 uppercase tracking-widest font-medium">
+                <a href="#" class="hover:text-white transition-colors">Home</a>
+                <iconify-icon icon="solar:alt-arrow-right-linear" width="12"></iconify-icon>
+                <a href="#" class="hover:text-white transition-colors">Guests</a>
+                <iconify-icon icon="solar:alt-arrow-right-linear" width="12"></iconify-icon>
+                <span class="text-orange-500">Dr. Eleanor Sterling</span>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+                
+                <!-- Left Column: Image -->
+                <div class="lg:col-span-5 fade-up delay-100">
+                    <div class="relative rounded-xl overflow-hidden aspect-[4/5] border border-white/10 group shadow-2xl">
+                        <!-- Guest Image -->
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Dr. Eleanor Sterling" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                        
+                        <!-- Overlay Gradient -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-60"></div>
+
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-6 left-6 right-6 p-4 bg-neutral-900/90 backdrop-blur-md border border-white/10 rounded-lg flex items-center justify-between">
+                            <div>
+                                <div class="text-[10px] font-medium text-orange-500 uppercase tracking-widest mb-1">Episode #142</div>
+                                <div class="text-sm text-white font-medium">The Psychology of Scale</div>
+                            </div>
+                            <button class="w-10 h-10 rounded-full bg-orange-600 text-white flex items-center justify-center hover:bg-orange-500 transition-colors shadow-lg shadow-orange-900/20">
+                                <iconify-icon icon="solar:play-bold" width="20" class="ml-1"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Info -->
+                <div class="lg:col-span-7 flex flex-col justify-center pt-4 fade-up delay-200">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 w-fit mb-6">
+                        <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+                        <span class="text-xs font-medium text-white tracking-wide uppercase">Featured Guest</span>
+                    </div>
+
+                    <h1 class="text-4xl lg:text-6xl font-medium text-white tracking-tight mb-2">
+                        Dr. Eleanor Sterling
+                    </h1>
+                    <p class="text-xl text-orange-500 font-serif italic mb-6">
+                        Cognitive Neuroscientist &amp; Best-Selling Author
+                    </p>
+
+                    <p class="text-lg text-neutral-400 font-light leading-relaxed mb-8 max-w-2xl border-l-2 border-white/10 pl-6">
+                        "Rewiring the corporate brain for peak performance in high-pressure environments."
+                    </p>
+
+                    <!-- Social Links -->
+                    <div class="flex items-center gap-4 mb-10">
+                        <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-800 hover:border-orange-500/50 transition-all" aria-label="Website">
+                            <iconify-icon icon="solar:link-circle-linear" width="20"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-800 hover:border-orange-500/50 transition-all" aria-label="LinkedIn">
+                            <iconify-icon icon="ri:linkedin-fill" width="20"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-800 hover:border-orange-500/50 transition-all" aria-label="Twitter">
+                            <iconify-icon icon="ri:twitter-x-line" width="18"></iconify-icon>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-800 hover:border-orange-500/50 transition-all" aria-label="Instagram">
+                            <iconify-icon icon="ri:instagram-line" width="20"></iconify-icon>
+                        </a>
+                         <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/10 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-800 hover:border-orange-500/50 transition-all" aria-label="YouTube">
+                            <iconify-icon icon="ri:youtube-fill" width="20"></iconify-icon>
+                        </a>
+                    </div>
+
+                    <!-- Main CTA -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-orange-600 text-white px-8 py-4 rounded-md text-sm font-medium hover:bg-orange-500 transition-all flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(234,88,12,0.2)] hover:shadow-[0_0_30px_rgba(234,88,12,0.4)] group">
+                            <iconify-icon icon="solar:headphones-round-linear" width="20" class="group-hover:scale-110 transition-transform"></iconify-icon>
+                            Listen to Episode
+                        </button>
+                        <button class="bg-transparent border border-white/10 text-white px-8 py-4 rounded-md text-sm font-medium hover:bg-white/5 transition-all flex items-center justify-center gap-3">
+                            <iconify-icon icon="solar:book-2-linear" width="20"></iconify-icon>
+                            Read Transcript
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Episode Highlight & Quote -->
+    <section class="py-12 border-t border-white/5 bg-neutral-900/20">
+        <div class="max-w-4xl mx-auto px-6 text-center fade-up">
+            <iconify-icon icon="solar:quote-up-bold" class="text-orange-500/30 text-5xl mb-6"></iconify-icon>
+            <blockquote class="text-2xl md:text-3xl lg:text-4xl font-serif font-medium text-white leading-tight mb-8">
+                "The biggest bottleneck in modern leadership isn't a lack of time—it's the mismanagement of <span class="text-orange-500 underline decoration-orange-500/30 underline-offset-4 decoration-1">cognitive energy</span>. We are making decisions with exhausted neural pathways."
+            </blockquote>
+            <cite class="text-sm font-medium text-neutral-500 not-italic tracking-wide uppercase">— Dr. Eleanor Sterling, on The Authority Podcast</cite>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: YouTube Video Embed -->
+    <section class="py-16 border-b border-white/5 relative">
+         <!-- Background ambient glow -->
+         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-full bg-orange-900/5 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-end justify-between mb-8 fade-up">
+                <div>
+                    <h2 class="text-2xl font-medium text-white tracking-tight mb-2 flex items-center gap-3">
+                        <iconify-icon icon="solar:videocamera-record-linear" class="text-orange-500"></iconify-icon>
+                        Watch the Episode
+                    </h2>
+                    <p class="text-neutral-500 text-sm font-light">Full video conversation available in 4K resolution.</p>
+                </div>
+                <div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-900 border border-white/10 text-xs text-white">
+                    <iconify-icon icon="logos:youtube-icon"></iconify-icon>
+                    <span class="opacity-80">Subscribe on YouTube</span>
+                </div>
+            </div>
+
+            <!-- Video Wrapper -->
+            <div class="fade-up delay-100 relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-neutral-900 group">
+                <div class="aspect-video w-full">
+                    <!-- Replace src with actual YouTube embed link -->
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=7B5uJp6Qz8fX9X4_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+                </div>
+                
+                <!-- Subtle overlay border for depth -->
+                <div class="absolute inset-0 border border-white/5 rounded-2xl pointer-events-none"></div>
+            </div>
+            
+            <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start fade-up delay-200">
+                <span class="text-xs text-neutral-500 flex items-center gap-2">
+                    <iconify-icon icon="solar:clock-circle-linear"></iconify-icon>
+                    00:54:12 Duration
+                </span>
+                 <span class="text-xs text-neutral-500 flex items-center gap-2">
+                    <iconify-icon icon="solar:eye-linear"></iconify-icon>
+                    12.4k Views
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biography & Expertise -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-16">
+                
+                <!-- Main Bio Content -->
+                <div class="lg:col-span-8 fade-up">
+                    <h2 class="text-2xl font-medium text-white mb-8 flex items-center gap-3">
+                        <iconify-icon icon="solar:user-id-linear" class="text-orange-500"></iconify-icon>
+                        About the Guest
+                    </h2>
+                    
+                    <div class="prose prose-invert prose-lg text-neutral-400 font-light leading-relaxed">
+                        <p class="mb-6">
+                            Dr. Eleanor Sterling is a renowned cognitive neuroscientist and the founder of The Sterling Institute, a research firm dedicated to optimizing human performance in high-stakes environments. With over two decades of experience working with Fortune 500 CEOs, Special Forces operators, and Olympic athletes, she has developed a proprietary framework for decision-making under pressure.
+                        </p>
+                        <p class="mb-6">
+                            Before founding her institute, Eleanor served as the Director of Behavioral Science at TechGiant Corp, where she led initiatives that reduced executive burnout by 40% while increasing creative output. Her research has been published in <em>Nature</em>, <em>The Harvard Business Review</em>, and <em>Scientific American</em>.
+                        </p>
+                        <p>
+                            She is the best-selling author of <em>"The Neural Executive"</em> and her upcoming book, <em>"Focus Capital,"</em> explores the economics of attention in the digital age. When she isn't in the lab or the boardroom, Eleanor is an avid alpinist, having summited three of the Seven Summits.
+                        </p>
+                    </div>
+
+                    <!-- Topics Discussed Tags -->
+                    <div class="mt-12">
+                        <h3 class="text-sm font-medium text-white uppercase tracking-wider mb-4 opacity-80">Topics Discussed in this Episode</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 rounded-full bg-neutral-900 border border-white/5 text-sm text-neutral-300 hover:border-orange-500/30 hover:text-orange-500 transition-colors cursor-default">Neuroscience of Leadership</span>
+                            <span class="px-4 py-2 rounded-full bg-neutral-900 border border-white/5 text-sm text-neutral-300 hover:border-orange-500/30 hover:text-orange-500 transition-colors cursor-default">Burnout Prevention</span>
+                            <span class="px-4 py-2 rounded-full bg-neutral-900 border border-white/5 text-sm text-neutral-300 hover:border-orange-500/30 hover:text-orange-500 transition-colors cursor-default">Deep Work</span>
+                            <span class="px-4 py-2 rounded-full bg-neutral-900 border border-white/5 text-sm text-neutral-300 hover:border-orange-500/30 hover:text-orange-500 transition-colors cursor-default">Organizational Psychology</span>
+                            <span class="px-4 py-2 rounded-full bg-neutral-900 border border-white/5 text-sm text-neutral-300 hover:border-orange-500/30 hover:text-orange-500 transition-colors cursor-default">Peak Performance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar: Stats & Credentials -->
+                <div class="lg:col-span-4 space-y-8 fade-up delay-200">
+                    
+                    <!-- Credentials Card -->
+                    <div class="p-6 rounded-xl bg-neutral-900/30 border border-white/5">
+                        <h3 class="text-lg font-medium text-white mb-6 border-b border-white/5 pb-4">Credentials</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:diploma-verified-linear" class="text-orange-500 mt-1 flex-shrink-0" width="18"></iconify-icon>
+                                <div>
+                                    <div class="text-white text-sm font-medium">PhD, Neuroscience</div>
+                                    <div class="text-neutral-500 text-xs">Stanford University</div>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:case-linear" class="text-orange-500 mt-1 flex-shrink-0" width="18"></iconify-icon>
+                                <div>
+                                    <div class="text-white text-sm font-medium">Founder &amp; CEO</div>
+                                    <div class="text-neutral-500 text-xs">The Sterling Institute</div>
+                                </div>
+                            </li>
+                             <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:book-linear" class="text-orange-500 mt-1 flex-shrink-0" width="18"></iconify-icon>
+                                <div>
+                                    <div class="text-white text-sm font-medium">Author</div>
+                                    <div class="text-neutral-500 text-xs">"The Neural Executive" (NYT Bestseller)</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Book Promo Card -->
+                    <div class="p-6 rounded-xl bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/5 group hover:border-orange-500/30 transition-all">
+                        <div class="flex items-start justify-between mb-4">
+                            <h3 class="text-lg font-medium text-white">Latest Book</h3>
+                            <iconify-icon icon="solar:star-circle-linear" class="text-orange-500" width="24"></iconify-icon>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <div class="w-16 h-24 bg-neutral-800 shadow-lg shrink-0 overflow-hidden relative rounded-sm">
+                                <div class="absolute inset-0 bg-neutral-700 flex items-center justify-center text-[8px] text-center p-1 font-serif text-white/50 border border-white/10">THE NEURAL EXECUTIVE</div>
+                            </div>
+                            <div>
+                                <div class="text-white font-medium text-sm mb-1">The Neural Executive</div>
+                                <div class="text-neutral-500 text-xs mb-3">Mastering your mind for modern leadership.</div>
+                                <a href="#" class="text-orange-500 text-xs font-medium hover:text-white transition-colors flex items-center gap-1">
+                                    Get a copy
+                                    <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Embedded Player / Listen Section -->
+    <section class="py-24 border-t border-white/5 bg-neutral-950 relative overflow-hidden">
+        <!-- Background Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-64 bg-orange-600/5 blur-3xl rounded-full pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-12 fade-up">
+                <h2 class="text-2xl font-medium text-white tracking-tight mb-2">Listen to Audio</h2>
+                <p class="text-neutral-500 text-sm">Prefer audio? Stream the episode on your favorite platform.</p>
+            </div>
+
+            <!-- Player Card -->
+            <div class="fade-up delay-100 bg-neutral-900/80 backdrop-blur border border-white/10 rounded-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden group">
+                <!-- Progress bar decoration -->
+                <div class="absolute top-0 left-0 h-1 bg-orange-600 w-1/3"></div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <!-- Artwork -->
+                    <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 rounded-lg bg-neutral-800 border border-white/5 overflow-hidden shadow-lg relative">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-white/10 backdrop-blur flex items-center justify-center text-white">
+                                <iconify-icon icon="solar:soundwave-linear" width="24"></iconify-icon>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="flex-1 w-full text-center md:text-left">
+                        <div class="text-orange-500 text-xs font-bold uppercase tracking-widest mb-2">Now Playing</div>
+                        <h3 class="text-xl md:text-2xl font-medium text-white mb-6">The Psychology of Scale with Dr. Eleanor Sterling</h3>
+                        
+                        <div class="flex flex-col gap-4">
+                            <!-- Fake Timeline -->
+                            <div class="w-full h-1 bg-neutral-700 rounded-full overflow-hidden">
+                                <div class="h-full w-1/3 bg-white rounded-full relative">
+                                    <div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between text-xs text-neutral-500 font-mono">
+                                <span>18:24</span>
+                                <span>54:02</span>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="flex items-center justify-center md:justify-start gap-6 mt-2">
+                                <button class="text-neutral-400 hover:text-white transition-colors">
+                                    <iconify-icon icon="solar:rewind-15-seconds-bold" width="24"></iconify-icon>
+                                </button>
+                                <button class="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center hover:scale-105 transition-transform shadow-lg shadow-white/10">
+                                    <iconify-icon icon="solar:play-bold" width="28" class="ml-1"></iconify-icon>
+                                </button>
+                                <button class="text-neutral-400 hover:text-white transition-colors">
+                                    <iconify-icon icon="solar:forward-15-seconds-bold" width="24"></iconify-icon>
+                                </button>
+                                
+                                <div class="w-px h-8 bg-white/10 mx-2"></div>
+                                
+                                <button class="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:bg-white/5 transition-colors text-xs text-white">
+                                    <iconify-icon icon="logos:spotify-icon" width="16"></iconify-icon>
+                                    Listen on Spotify
+                                </button>
+                                <button class="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:bg-white/5 transition-colors text-xs text-white">
+                                    <iconify-icon icon="cib:apple-music" width="16"></iconify-icon>
+                                    Apple Podcasts
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Appearances -->
+    <section class="py-24 border-t border-white/5 bg-neutral-900/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-2xl font-medium text-white mb-10 fade-up">Media &amp; Speaking</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 fade-up delay-100">
+                <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-black/50 group-hover:bg-transparent transition-colors"></div>
+                    <div class="absolute bottom-3 left-3 text-white text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">TEDx Talk 2022</div>
+                </div>
+                <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                     <div class="absolute inset-0 bg-black/50 group-hover:bg-transparent transition-colors"></div>
+                     <div class="absolute bottom-3 left-3 text-white text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">Annual Summit Keynote</div>
+                </div>
+                <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                     <div class="absolute inset-0 bg-black/50 group-hover:bg-transparent transition-colors"></div>
+                     <div class="absolute bottom-3 left-3 text-white text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">Boardroom Workshop</div>
+                </div>
+                <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer bg-neutral-900 border border-white/5 flex items-center justify-center flex-col gap-2 hover:border-orange-500/30 transition-colors">
+                    <iconify-icon icon="solar:gallery-wide-linear" class="text-neutral-500 group-hover:text-orange-500 transition-colors" width="32"></iconify-icon>
+                    <span class="text-xs text-neutral-500">View Press Kit</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Footer -->
+    <footer class="bg-neutral-950 pt-20 pb-10 border-t border-white/5 font-sans relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Newsletter Section -->
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-16 border-b border-white/5">
+                <div class="max-w-lg">
+                    <h3 class="text-xl font-medium text-white mb-2">Subscribe to our intelligence briefing.</h3>
+                    <p class="text-sm text-neutral-400 font-light">Join 10,000+ leaders receiving weekly insights on authority marketing and media strategy.</p>
+                </div>
+                
+                <form class="flex w-full md:w-auto gap-2">
+                    <input type="email" placeholder="Enter your email" class="w-full md:w-64 bg-neutral-900 border border-white/10 rounded-md px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-orange-500 transition-colors">
+                    <button type="button" class="bg-orange-600 text-white px-6 py-3 rounded-md text-sm font-medium hover:bg-orange-500 transition-colors shadow-[0_0_15px_rgba(234,88,12,0.2)]">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 text-xs text-neutral-600">
+                <p>© 2024 Authority Media Network. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-orange-500 transition-colors">Home</a>
+                    <a href="#" class="hover:text-orange-500 transition-colors">Guest Directory</a>
+                    <a href="#" class="hover:text-orange-500 transition-colors">Apply to be a Guest</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            // Placeholder for functionality
+        }
+        
+        // Intersection Observer for Fade-Up Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-up');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body></html>

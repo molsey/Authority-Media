@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ep. 42: Scaling to $10M | The Authority Formula</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Inter', sans-serif; }
+.font-serif { font-family: 'Playfair Display', serif; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.fade-up {
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+/* Audio Player Range Input Customization */
+input[type=range] {
+-webkit-appearance: none;
+background: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+-webkit-appearance: none;
+height: 12px;
+width: 12px;
+border-radius: 50%;
+background: #fff;
+margin-top: -5px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+input[type=range]::-webkit-slider-runnable-track {
+width: 100%;
+height: 2px;
+background: #333;
+border-radius: 2px;
+}
+input[type=range]:focus { outline: none; }
+</style></head>
+<body class="bg-neutral-950 text-neutral-400 antialiased selection:bg-orange-500/20 selection:text-orange-200">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 text-white font-medium tracking-tighter text-lg uppercase group hover:text-orange-500 transition-colors">
+                AMN. <span class="text-neutral-600 font-light mx-2">|</span> <span class="font-serif italic text-sm normal-case tracking-normal">The Podcast</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm">
+                <a href="#" class="hover:text-white transition-colors">All Episodes</a>
+                <a href="#" class="text-white">Now Playing</a>
+                <a href="#" class="hover:text-white transition-colors">Subscribe</a>
+            </div>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#" class="group flex items-center gap-2 bg-white text-neutral-950 px-4 py-2 rounded text-xs font-medium hover:bg-neutral-200 transition-all">
+                    <iconify-icon icon="solar:headphones-round-linear"></iconify-icon> Listen on Apple
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Episode Hero Section -->
+    <header class="relative pt-32 pb-16 lg:pt-40 lg:pb-24 border-b border-white/5 overflow-hidden">
+        <!-- Background Ambient Glows -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-900/10 blur-[120px] rounded-full pointer-events-none opacity-40"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/10 blur-[120px] rounded-full pointer-events-none opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Text Content -->
+                <div class="lg:col-span-8 fade-up">
+                    <div class="flex items-center gap-3 mb-6">
+                        <a href="#" class="text-xs font-medium text-orange-500 hover:text-orange-400 uppercase tracking-widest flex items-center gap-1">
+                            <iconify-icon icon="solar:arrow-left-linear"></iconify-icon> Back to Episodes
+                        </a>
+                        <span class="text-neutral-700">|</span>
+                        <span class="text-xs font-medium text-neutral-500 uppercase tracking-widest">Season 3, Ep 42</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-6xl font-medium text-white tracking-tight leading-[1.1] mb-6">
+                        Scaling to $10M with <br>
+                        <span class="text-neutral-500 italic font-serif">Authority Marketing</span>
+                    </h1>
+
+                    <p class="text-lg font-light text-neutral-300 max-w-2xl leading-relaxed mb-8">
+                        The traditional funnel is broken. In this episode, we deconstruct the "Authority Flywheel" that allowed Apex Consulting to bypass cold outreach entirely and generate $10M in inbound pipeline.
+                    </p>
+
+                    <!-- Embedded Audio Player UI -->
+                    <div class="bg-neutral-900/50 border border-white/10 rounded-xl p-4 sm:p-6 backdrop-blur-md shadow-2xl">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center justify-between text-xs font-mono text-neutral-500">
+                                <span>00:00</span>
+                                <span>45:30</span>
+                            </div>
+                            <!-- Fake Progress Bar -->
+                            <div class="relative h-1 bg-neutral-700 rounded-full w-full group cursor-pointer">
+                                <div class="absolute top-0 left-0 h-full w-[35%] bg-orange-500 rounded-full"></div>
+                                <div class="absolute top-1/2 left-[35%] -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between mt-2">
+                                <div class="flex items-center gap-4">
+                                    <button class="w-12 h-12 flex items-center justify-center bg-white text-black rounded-full hover:scale-105 transition-transform">
+                                        <iconify-icon icon="solar:play-bold" class="text-xl ml-1"></iconify-icon>
+                                    </button>
+                                    <button class="text-neutral-400 hover:text-white transition-colors">
+                                        <iconify-icon icon="solar:rewind-15-seconds-forward-linear" class="text-2xl"></iconify-icon>
+                                    </button>
+                                    <button class="text-neutral-400 hover:text-white transition-colors">
+                                        <iconify-icon icon="solar:fast-forward-15-seconds-linear" class="text-2xl"></iconify-icon>
+                                    </button>
+                                </div>
+                                
+                                <div class="flex items-center gap-3">
+                                    <button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-white/10 text-xs text-neutral-300 hover:bg-white/5 transition-colors">
+                                        <iconify-icon icon="solar:download-linear"></iconify-icon> MP3
+                                    </button>
+                                    <button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-white/10 text-xs text-neutral-300 hover:bg-white/5 transition-colors">
+                                        <iconify-icon icon="solar:share-linear"></iconify-icon> Share
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Thumbnail Art -->
+                <div class="hidden lg:block lg:col-span-4 fade-up delay-100">
+                    <div class="relative aspect-square rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Episode Art" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <span class="inline-block px-2 py-1 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-wider rounded mb-2">Strategy</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid lg:grid-cols-12 gap-12">
+            
+            <!-- Left: Video & Transcript -->
+            <div class="lg:col-span-8">
+
+                <!-- Video Embed Section -->
+                <div class="mb-12 fade-up">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-sm font-medium text-white flex items-center gap-2">
+                            <iconify-icon icon="solar:videocamera-record-linear" class="text-orange-500"></iconify-icon>
+                            Watch Episode
+                        </h2>
+                        <span class="text-xs text-neutral-500 font-mono">4K Quality</span>
+                    </div>
+                    
+                    <div class="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-neutral-900 group">
+                        <!-- Placeholder iframe src for demo -->
+                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ?mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+                        </iframe>
+                        <!-- Overlay for style consistency (optional, adds subtle border inset) -->
+                        <div class="absolute inset-0 border border-white/5 pointer-events-none rounded-xl"></div>
+                    </div>
+                    <p class="mt-3 text-xs text-neutral-500 text-right">Filmed at Authority Studios, London</p>
+                </div>
+                
+                <!-- Tabs (Visual) -->
+                <div class="flex gap-8 border-b border-white/10 mb-10 text-sm">
+                    <button class="pb-4 border-b border-orange-500 text-white font-medium">Transcript</button>
+                    <button class="pb-4 border-b border-transparent text-neutral-500 hover:text-white transition-colors">Show Notes</button>
+                    <button class="pb-4 border-b border-transparent text-neutral-500 hover:text-white transition-colors">Links &amp; Resources</button>
+                </div>
+
+                <!-- Transcript Container -->
+                <article class="prose prose-invert prose-neutral max-w-none text-neutral-300 font-light leading-loose">
+                    <div class="bg-neutral-900/30 border border-white/5 rounded-xl p-8">
+                        <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/5">
+                            <h3 class="text-sm font-medium text-neutral-500 uppercase tracking-wider">Full Episode Transcript</h3>
+                            <button class="text-xs flex items-center gap-1 text-orange-500 hover:text-orange-400">
+                                <iconify-icon icon="solar:copy-linear"></iconify-icon> Copy Text
+                            </button>
+                        </div>
+
+                        <!-- Transcript Body -->
+                        <div class="space-y-8 text-base">
+                            
+                            <!-- Host Speaking -->
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-10 text-xs font-bold text-orange-500 uppercase pt-1">G.W.</div>
+                                <div>
+                                    <p class="mb-2"><span class="text-neutral-500 text-xs font-mono mr-2">[00:00:15]</span> Welcome back to The Authority Formula. I'm your host, George Wright III. Today, we are tackling the elephant in the room for most service-based businesses: scalability.</p>
+                                    <p>We all know that referrals are great, but they aren't predictable. If you want to get to that eight-figure mark, you need a system. You need what we call the "Authority Flywheel."</p>
+                                </div>
+                            </div>
+
+                            <!-- Guest Speaking -->
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-10 text-xs font-bold text-white uppercase pt-1">Guest</div>
+                                <div>
+                                    <p class="mb-2"><span class="text-neutral-500 text-xs font-mono mr-2">[00:01:20]</span> Exactly, George. It's funny you mention referrals. When I started Apex, strictly relying on word-of-mouth was actually our biggest bottleneck.</p>
+                                    <p>We realized that to scale, we had to productize our expertise. We had to take what was in our heads and turn it into media assets that could sell for us while we slept.</p>
+                                </div>
+                            </div>
+
+                            <!-- Host Speaking -->
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-10 text-xs font-bold text-orange-500 uppercase pt-1">G.W.</div>
+                                <div>
+                                    <p class="mb-2"><span class="text-neutral-500 text-xs font-mono mr-2">[00:02:45]</span> That shift from "doing" to "teaching" is where most founders get stuck. They think, "If I give away my secrets, no one will hire me." But you found the opposite to be true, didn't you?</p>
+                                </div>
+                            </div>
+
+                            <!-- Guest Speaking -->
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-10 text-xs font-bold text-white uppercase pt-1">Guest</div>
+                                <div>
+                                    <p class="mb-2"><span class="text-neutral-500 text-xs font-mono mr-2">[00:03:10]</span> 100%. The more we gave away in our content, the higher our fees went. It's the paradox of authority. Cheap information is guarded; expensive expertise is often demonstrated openly.</p>
+                                    <p>When we released our framework on LinkedIn, our inbound leads tripled in roughly 45 days. And the quality was different. These weren't people asking "how much?"; these were people asking "when can we start?".</p>
+                                </div>
+                            </div>
+
+                             <!-- Host Speaking -->
+                             <div class="flex gap-4">
+                                <div class="flex-shrink-0 w-10 text-xs font-bold text-orange-500 uppercase pt-1">G.W.</div>
+                                <div>
+                                    <p class="mb-2"><span class="text-neutral-500 text-xs font-mono mr-2">[00:04:15]</span> Let's drill down into that framework. For the listeners driving right now, what is step one? If they have zero content presence today, where does George Wright III tell them to start?</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Placeholder for remaining text -->
+                            <div class="p-4 bg-white/5 rounded border border-dashed border-white/10 text-center text-sm text-neutral-500">
+                                ... Transcript continues for 40 more minutes ...
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Right: Sidebar (Guest & Host) -->
+            <aside class="lg:col-span-4 space-y-8">
+                
+                <!-- Guest Card -->
+                <div class="sticky top-24 space-y-8">
+                    <div class="p-6 bg-neutral-900 border border-white/10 rounded-xl">
+                        <div class="flex items-start justify-between mb-4">
+                            <h4 class="text-xs font-bold text-neutral-500 uppercase tracking-wider">Featured Guest</h4>
+                            <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-white border border-white/5">CEO, Apex Consulting</span>
+                        </div>
+                        
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-full overflow-hidden border border-white/10 flex-shrink-0">
+                                <img src="https://i.pravatar.cc/300?img=68" alt="Guest" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-white">Sarah Jenkins</h3>
+                                <p class="text-xs text-neutral-400">Growth Strategist</p>
+                            </div>
+                        </div>
+
+                        <p class="text-sm text-neutral-400 font-light mb-6 leading-relaxed">
+                            Sarah Jenkins built Apex Consulting from a solo practice to a $10M firm in 3 years. She is the author of "The Scale Blueprint" and advises Fortune 500 tech companies on B2B sales velocity.
+                        </p>
+
+                        <div class="flex items-center gap-3">
+                            <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-neutral-400 hover:bg-orange-500 hover:text-white transition-all">
+                                <iconify-icon icon="solar:global-linear"></iconify-icon>
+                            </a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-neutral-400 hover:bg-blue-500 hover:text-white transition-all">
+                                <iconify-icon icon="logos:linkedin-icon" width="14" class="grayscale brightness-200 invert"></iconify-icon>
+                            </a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-neutral-400 hover:bg-black hover:text-white transition-all">
+                                <iconify-icon icon="logos:twitter" width="12" class="grayscale brightness-200 invert"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Host Card -->
+                    <div class="p-6 bg-gradient-to-br from-neutral-900 to-neutral-950 border border-white/10 rounded-xl relative overflow-hidden">
+                        <!-- Decorative bg -->
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 blur-3xl rounded-full pointer-events-none"></div>
+
+                        <h4 class="text-xs font-bold text-orange-500 uppercase tracking-wider mb-6">Hosted By</h4>
+
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-orange-500/20 mb-4 shadow-lg p-1 bg-neutral-950">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="George Wright III" class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500">
+                            </div>
+                            
+                            <h3 class="text-xl font-medium text-white mb-1">George Wright III</h3>
+                            <p class="text-xs text-neutral-500 uppercase tracking-widest mb-4">Founder, AMN Media</p>
+                            
+                            <p class="text-sm text-neutral-400 font-light mb-6 leading-relaxed">
+                                George helps industry experts become media moguls. With over 20 years in broadcasting and digital marketing, he uncovers the formulas behind the world's most influential personal brands.
+                            </p>
+
+                            <div class="flex flex-col w-full gap-3">
+                                <a href="#" class="w-full py-2 rounded bg-white text-neutral-950 text-xs font-medium hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2">
+                                    Visit Website <iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon>
+                                </a>
+                                <div class="flex justify-center gap-4 mt-2">
+                                    <a href="#" class="text-neutral-500 hover:text-white transition-colors"><iconify-icon icon="solar:videocamera-record-linear" width="20"></iconify-icon></a>
+                                    <a href="#" class="text-neutral-500 hover:text-white transition-colors"><iconify-icon icon="logos:linkedin-icon" width="18" class="grayscale brightness-200 invert"></iconify-icon></a>
+                                    <a href="#" class="text-neutral-500 hover:text-white transition-colors"><iconify-icon icon="solar:letter-linear" width="20"></iconify-icon></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Mini -->
+                    <div class="p-6 bg-orange-600 rounded-xl text-center">
+                        <iconify-icon icon="solar:bell-bing-bold" class="text-3xl text-white mb-3"></iconify-icon>
+                        <h4 class="text-white font-medium mb-2">Get the PDF Summary</h4>
+                        <p class="text-xs text-orange-100 mb-4 leading-relaxed">We condensed this 45-min episode into a 2-page cheat sheet.</p>
+                        <button class="w-full bg-white text-orange-600 py-2 rounded text-xs font-bold hover:bg-orange-50 transition-colors">Download Free</button>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Detailed Footer -->
+    <footer class="bg-neutral-950 pt-20 pb-10 border-t border-white/5 font-sans">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-12 pb-12">
+                <div class="col-span-2 lg:col-span-4 flex flex-col gap-6 pr-8">
+                    <a href="#" class="text-white font-medium tracking-tighter text-xl uppercase hover:text-orange-500 transition-colors">AMN.</a>
+                    <p class="text-sm text-neutral-500 font-light leading-relaxed max-w-sm">
+                        The Authority Formula Podcast is a production of Authority Media Network. Produced &amp; Hosted by George Wright III.
+                    </p>
+                </div>
+                <div class="col-span-1 lg:col-span-2">
+                    <h4 class="text-white font-medium mb-6">Podcast</h4>
+                    <ul class="flex flex-col gap-4 text-sm font-light text-neutral-400">
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Latest Episodes</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Guests</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-1 lg:col-span-2">
+                    <h4 class="text-white font-medium mb-6">Socials</h4>
+                    <ul class="flex flex-col gap-4 text-sm font-light text-neutral-400">
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Twitter / X</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2 lg:col-span-4">
+                     <h4 class="text-white font-medium mb-6">Contact George</h4>
+                     <a href="mailto:george@amn.media" class="text-orange-500 text-sm hover:text-white transition-colors">george@amn.media</a>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-white/5 text-xs text-neutral-600">
+                <p>© 2024 George Wright III. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-orange-500 transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-orange-500 transition-colors">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        });
+    </script>
+
+</body></html>

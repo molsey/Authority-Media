@@ -5,51 +5,120 @@
 body { font-family: 'Inter', sans-serif; }
 .font-serif { font-family: 'Playfair Display', serif; }
 
-/* Custom scrollbar hide */
+/* ─── Text Gradient Utilities ─── */
+.text-gradient-orange {
+  @apply bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent;
+}
+.text-gradient-white {
+  @apply bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-transparent;
+}
+
+/* ─── Scroll-triggered Fade-up ─── */
+/* Triggered via IntersectionObserver in main.js */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delay modifiers */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* ─── Glow Effects ─── */
+.glow-orange {
+  box-shadow: 0 0 20px rgba(234, 88, 12, 0.3), 0 0 60px rgba(234, 88, 12, 0.1);
+}
+.glow-orange-lg {
+  box-shadow: 0 0 30px rgba(234, 88, 12, 0.4), 0 0 80px rgba(234, 88, 12, 0.15);
+}
+
+/* ─── Glassmorphism Shorthand ─── */
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+.glass-dark {
+  @apply bg-neutral-950/50 backdrop-blur-md border border-white/10;
+}
+
+/* ─── Mobile Menu Slide-Down ─── */
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+/* ─── Scrollbar Hide ─── */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* Marquee Animation */
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-.animate-scroll {
-    animation: scroll 30s linear infinite;
-}
-.animate-scroll:hover {
-    animation-play-state: paused;
+/* ─── Audio Waveform Bars ─── */
+@keyframes waveform {
+  0%, 100% { height: 20%; }
+  50% { height: 80%; }
 }
 
-/* Fade Up Animation Classes */
-.fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    will-change: opacity, transform;
-}
-.fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Subtle Glow Pulse */
+/* ─── Pulse Glow (8s, slower variant for hero backgrounds) ─── */
 @keyframes pulse-glow {
-    0%, 100% { opacity: 0.1; transform: translate(-50%, 0) scale(1); }
-    50% { opacity: 0.15; transform: translate(-50%, 0) scale(1.1); }
+  0%, 100% { opacity: 0.1; transform: translate(-50%, 0) scale(1); }
+  50% { opacity: 0.15; transform: translate(-50%, 0) scale(1.1); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 8s ease-in-out infinite;
 }
 .animate-pulse-slow {
-    animation: pulse-glow 8s ease-in-out infinite;
+  animation: pulse-glow 8s ease-in-out infinite;
 }
 
-/* Equalizer Animation */
+/* ─── Image Grayscale Hover ─── */
+.grayscale-hover { filter: grayscale(100%); transition: filter 0.5s ease; }
+.group:hover .grayscale-hover { filter: grayscale(0%); }
+
+/* ─── Float Animation ─── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(-3deg); }
+  50% { transform: translateY(-10px) rotate(-3deg); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ─── Marquee Hover Pause ─── */
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* ─── Invert Black Logos for Dark Backgrounds ─── */
+.logo-invert {
+  filter: invert(1);
+  opacity: 0.8;
+}
+
+/* ─── Custom Checkbox Styling ─── */
+.custom-checkbox input:checked + div {
+    background-color: rgb(234, 88, 12);
+    border-color: rgb(234, 88, 12);
+}
+.custom-checkbox input:checked + div svg {
+    display: block;
+}
+
+/* ─── Equalizer / Waveform Bar Animation ─── */
 @keyframes equalize {
-    0% { height: 10%; }
-    50% { height: 100%; }
-    100% { height: 10%; }
+  0% { height: 10%; }
+  50% { height: 100%; }
+  100% { height: 10%; }
 }
 .bar {
-    animation: equalize 1s infinite ease-in-out;
+  animation: equalize 1s infinite ease-in-out;
 }
 .bar:nth-child(1) { animation-duration: 0.8s; }
 .bar:nth-child(2) { animation-duration: 1.1s; }
@@ -58,7 +127,80 @@ body { font-family: 'Inter', sans-serif; }
 .bar:nth-child(5) { animation-duration: 0.7s; }
 .bar:nth-child(6) { animation-duration: 1.0s; }
 
-/* Accordion Transition */
-.faq-content {
-    transition: grid-template-rows 0.3s ease-out;
+/* ─── Audio Wave Animation (Podcast Player) ─── */
+@keyframes wave {
+  0%, 100% { height: 10%; }
+  50% { height: 100%; }
 }
+.audio-bar {
+  animation: wave 1s ease-in-out infinite;
+  background-color: #f97316;
+  width: 3px;
+  border-radius: 999px;
+}
+.audio-bar:nth-child(odd) { animation-duration: 0.8s; }
+.audio-bar:nth-child(2n) { animation-duration: 1.1s; }
+.audio-bar:nth-child(3n) { animation-duration: 1.3s; }
+.audio-bar:nth-child(4n) { animation-duration: 0.9s; }
+.paused .audio-bar { animation-play-state: paused; height: 20%; transition: height 0.3s ease; }
+
+/* ─── Guest Card Hover Effects ─── */
+.guest-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.guest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+.guest-image-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,10,10,0.9) 0%, transparent 60%);
+  opacity: 0.8;
+  transition: opacity 0.4s;
+}
+.guest-card:hover .guest-image-container::after {
+  opacity: 0.6;
+}
+
+/* ─── Progress Bar Hover Knob ─── */
+#single-progress-fill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+#single-progress-bar:hover #single-progress-fill::after {
+  opacity: 1;
+}
+
+/* ─── Audio Player Range Input ─── */
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #fff;
+  margin-top: -5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  background: #333;
+  border-radius: 2px;
+}
+input[type=range]:focus { outline: none; }

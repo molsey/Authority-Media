@@ -1,0 +1,356 @@
+<html lang="en" class="scroll-smooth"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guest Archive - Authority Media Network</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Inter', sans-serif; }
+.font-serif { font-family: 'Playfair Display', serif; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Fade Up Animation Classes */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+/* Subtle Glow Pulse */
+@keyframes pulse-glow {
+    0%, 100% { opacity: 0.08; transform: translate(-50%, 0) scale(1); }
+    50% { opacity: 0.12; transform: translate(-50%, 0) scale(1.1); }
+}
+.animate-pulse-slow {
+    animation: pulse-glow 8s ease-in-out infinite;
+}
+
+/* Card Hover Effects */
+.guest-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.guest-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+.guest-image-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,10,10,0.9) 0%, transparent 60%);
+    opacity: 0.8;
+    transition: opacity 0.4s;
+}
+.guest-card:hover .guest-image-container::after {
+    opacity: 0.6;
+}
+</style>
+</head>
+<body class="bg-neutral-950 text-neutral-400 antialiased selection:bg-orange-500/20 selection:text-orange-200 overflow-x-hidden min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-white font-medium tracking-tighter text-xl uppercase group hover:text-orange-500 transition-colors z-50 relative">
+                AMN.
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-normal">
+                <a href="#" class="hover:text-white transition-colors duration-200">Podcast</a>
+                <a href="#" class="hover:text-white transition-colors duration-200">Newsletter</a>
+                <a href="#" class="text-white">Guests</a>
+            </div>
+            <div class="md:hidden text-white cursor-pointer">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24"></iconify-icon>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-20 relative">
+        <!-- Background decorative glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[500px] bg-orange-900/10 blur-[100px] rounded-full pointer-events-none animate-pulse-slow"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            
+            <!-- Header & Search Section -->
+            <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-20">
+                <div class="fade-up inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 w-fit mb-6">
+                    <span class="text-[10px] font-medium text-orange-500 tracking-wider uppercase">The Archive</span>
+                </div>
+                
+                <h1 class="fade-up delay-100 text-4xl sm:text-5xl font-medium text-white tracking-tight leading-[1.1] mb-6">
+                    Distinguished <span class="font-serif italic text-neutral-500">Voices</span>
+                </h1>
+                
+                <p class="fade-up delay-200 text-lg font-light text-neutral-400 leading-relaxed mb-10">
+                    Explore the industry leaders, visionaries, and disruptors who have shared their blueprint on the show.
+                </p>
+
+                <!-- Search Bar -->
+                <div class="fade-up delay-300 w-full relative group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative flex items-center bg-neutral-900 border border-white/10 rounded-full shadow-2xl transition-all duration-300 focus-within:border-orange-500/50 focus-within:ring-1 focus-within:ring-orange-500/20">
+                        <div class="pl-5 text-neutral-500 flex items-center pointer-events-none">
+                            <iconify-icon icon="solar:magnifer-linear" width="20"></iconify-icon>
+                        </div>
+                        <input type="text" id="guestSearch" placeholder="Search guests by name or company..." class="w-full bg-transparent border-none text-white placeholder:text-neutral-600 focus:ring-0 focus:outline-none py-4 px-4 text-sm font-light">
+                        <div class="pr-2">
+                             <button class="p-2 bg-neutral-800 hover:bg-neutral-700 rounded-full text-neutral-400 transition-colors">
+                                <iconify-icon icon="solar:sort-vertical-linear" width="18"></iconify-icon>
+                             </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guests Grid -->
+            <div id="guestGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 fade-up delay-300">
+                
+                <!-- Guest 1 -->
+                <a href="#" class="guest-card group relative bg-neutral-900 border border-white/5 rounded-2xl overflow-hidden block" data-name="Elena Vance" data-company="Stripe">
+                    <div class="guest-image-container h-72 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Elena Vance" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-neutral-950/80 backdrop-blur text-white text-[10px] font-medium px-2 py-1 rounded border border-white/10">Ep. 142</span>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-white text-lg font-medium tracking-tight group-hover:text-orange-500 transition-colors">Elena Vance</h3>
+                                <p class="text-sm text-neutral-500 font-light">Head of Product, Stripe</p>
+                            </div>
+                            <div class="text-neutral-600 group-hover:text-white transition-colors transform -rotate-45 group-hover:rotate-0 duration-300">
+                                <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex gap-2">
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Fintech</span>
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Scaling</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Guest 2 -->
+                <a href="#" class="guest-card group relative bg-neutral-900 border border-white/5 rounded-2xl overflow-hidden block" data-name="Marcus Chen" data-company="Vercel">
+                    <div class="guest-image-container h-72 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Marcus Chen" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                         <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-neutral-950/80 backdrop-blur text-white text-[10px] font-medium px-2 py-1 rounded border border-white/10">Ep. 141</span>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-white text-lg font-medium tracking-tight group-hover:text-orange-500 transition-colors">Marcus Chen</h3>
+                                <p class="text-sm text-neutral-500 font-light">VP Engineering, Vercel</p>
+                            </div>
+                            <div class="text-neutral-600 group-hover:text-white transition-colors transform -rotate-45 group-hover:rotate-0 duration-300">
+                                <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex gap-2">
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">DevTools</span>
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Cloud</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Guest 3 -->
+                <a href="#" class="guest-card group relative bg-neutral-900 border border-white/5 rounded-2xl overflow-hidden block" data-name="Sarah Johnson" data-company="Linear">
+                    <div class="guest-image-container h-72 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Sarah Johnson" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                         <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-neutral-950/80 backdrop-blur text-white text-[10px] font-medium px-2 py-1 rounded border border-white/10">Ep. 140</span>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-white text-lg font-medium tracking-tight group-hover:text-orange-500 transition-colors">Sarah Johnson</h3>
+                                <p class="text-sm text-neutral-500 font-light">Design Director, Linear</p>
+                            </div>
+                            <div class="text-neutral-600 group-hover:text-white transition-colors transform -rotate-45 group-hover:rotate-0 duration-300">
+                                <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex gap-2">
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Design</span>
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">UX/UI</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Guest 4 -->
+                <a href="#" class="guest-card group relative bg-neutral-900 border border-white/5 rounded-2xl overflow-hidden block" data-name="David Park" data-company="OpenAI">
+                    <div class="guest-image-container h-72 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="David Park" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                         <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-neutral-950/80 backdrop-blur text-white text-[10px] font-medium px-2 py-1 rounded border border-white/10">Ep. 139</span>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-white text-lg font-medium tracking-tight group-hover:text-orange-500 transition-colors">David Park</h3>
+                                <p class="text-sm text-neutral-500 font-light">Research Scientist, OpenAI</p>
+                            </div>
+                            <div class="text-neutral-600 group-hover:text-white transition-colors transform -rotate-45 group-hover:rotate-0 duration-300">
+                                <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex gap-2">
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">AI/ML</span>
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Future</span>
+                        </div>
+                    </div>
+                </a>
+
+                 <!-- Guest 5 -->
+                 <a href="#" class="guest-card group relative bg-neutral-900 border border-white/5 rounded-2xl overflow-hidden block" data-name="Olivia Sterling" data-company="Figma">
+                    <div class="guest-image-container h-72 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Olivia Sterling" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                         <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-neutral-950/80 backdrop-blur text-white text-[10px] font-medium px-2 py-1 rounded border border-white/10">Ep. 138</span>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-white text-lg font-medium tracking-tight group-hover:text-orange-500 transition-colors">Olivia Sterling</h3>
+                                <p class="text-sm text-neutral-500 font-light">CMO, Figma</p>
+                            </div>
+                            <div class="text-neutral-600 group-hover:text-white transition-colors transform -rotate-45 group-hover:rotate-0 duration-300">
+                                <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex gap-2">
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Marketing</span>
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Brand</span>
+                        </div>
+                    </div>
+                </a>
+
+                 <!-- Guest 6 -->
+                 <a href="#" class="guest-card group relative bg-neutral-900 border border-white/5 rounded-2xl overflow-hidden block" data-name="James Thorne" data-company="Sequoia">
+                    <div class="guest-image-container h-72 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="James Thorne" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                         <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-neutral-950/80 backdrop-blur text-white text-[10px] font-medium px-2 py-1 rounded border border-white/10">Ep. 137</span>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-white text-lg font-medium tracking-tight group-hover:text-orange-500 transition-colors">James Thorne</h3>
+                                <p class="text-sm text-neutral-500 font-light">Partner, Sequoia</p>
+                            </div>
+                            <div class="text-neutral-600 group-hover:text-white transition-colors transform -rotate-45 group-hover:rotate-0 duration-300">
+                                <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex gap-2">
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Venture</span>
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Strategy</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+             <!-- Empty State (Hidden by default) -->
+             <div id="noResults" class="hidden text-center py-20 fade-up">
+                <div class="bg-neutral-900/50 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4 border border-white/5">
+                    <iconify-icon icon="solar:magnifer-linear" width="24" class="text-neutral-500"></iconify-icon>
+                </div>
+                <h3 class="text-white font-medium text-lg">No guests found</h3>
+                <p class="text-neutral-500 text-sm mt-2">Try searching for a different name or company.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-neutral-950 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                 <span class="text-white font-medium tracking-tighter text-lg uppercase">AMN.</span>
+                 <span class="text-xs text-neutral-600 ml-4">© 2024 Authority Media Network</span>
+            </div>
+            
+            <div class="flex gap-6">
+                <a href="#" class="text-neutral-500 hover:text-orange-500 transition-colors transform hover:scale-110"><iconify-icon icon="solar:camera-linear" width="20"></iconify-icon></a>
+                <a href="#" class="text-neutral-500 hover:text-orange-500 transition-colors transform hover:scale-110"><iconify-icon icon="solar:mention-linear" width="20"></iconify-icon></a>
+                <a href="#" class="text-neutral-500 hover:text-orange-500 transition-colors transform hover:scale-110"><iconify-icon icon="solar:letter-linear" width="20"></iconify-icon></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Intersection Observer for Fade-Up Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-up');
+            fadeElements.forEach(el => observer.observe(el));
+
+            // Search Functionality
+            const searchInput = document.getElementById('guestSearch');
+            const guestCards = document.querySelectorAll('.guest-card');
+            const noResults = document.getElementById('noResults');
+
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                let hasResults = false;
+
+                guestCards.forEach(card => {
+                    const name = card.getAttribute('data-name').toLowerCase();
+                    const company = card.getAttribute('data-company').toLowerCase();
+                    
+                    if (name.includes(query) || company.includes(query)) {
+                        card.style.display = 'block';
+                        // Re-trigger fade for aesthetics if previously hidden
+                        if(card.classList.contains('hidden')) {
+                             card.classList.remove('hidden');
+                        }
+                        hasResults = true;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (!hasResults) {
+                    noResults.classList.remove('hidden');
+                    noResults.classList.add('visible');
+                } else {
+                    noResults.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+</body></html>

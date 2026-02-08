@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Archive - Authority Media Network</title>
+    <meta name="description" content="Explore the industry leaders, visionaries, and disruptors who have shared their blueprint on the Authority Media Network show.">
+    <meta property="og:title" content="Guest Archive - Authority Media Network">
+    <meta property="og:description" content="Explore the industry leaders, visionaries, and disruptors who have shared their blueprint on the show.">
+    <meta property="og:type" content="website">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="bg-neutral-950 text-neutral-400 antialiased selection:bg-orange-500/20 selection:text-orange-200 overflow-x-hidden min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="z-50 relative group"><img src="/authority-media-network-navbar-logo.svg" alt="Authority Media Network" class="h-8 md:h-10 w-auto transition-opacity group-hover:opacity-80"></a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-normal">
+                <a href="/about.html" class="hover:text-white transition-colors duration-200">About</a>
+                <a href="/podcast.html" class="hover:text-white transition-colors duration-200">Podcast</a>
+                <a href="/authority.html" class="hover:text-white transition-colors duration-200">Authority</a>
+                <a href="/media.html" class="hover:text-white transition-colors duration-200">Media</a>
+            </div>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="/form.html" class="group flex items-center gap-2 bg-orange-600 text-white px-4 py-2 rounded text-xs font-medium hover:bg-orange-500 transition-all shadow-[0_0_15px_rgba(234,88,12,0.3)] hover:shadow-[0_0_25px_rgba(234,88,12,0.5)]">
+                    Book Strategy Call
+                    <iconify-icon icon="solar:arrow-right-linear" class="transition-transform group-hover:translate-x-1"></iconify-icon>
+                </a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-white hover:text-orange-500 transition-colors z-50 relative" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24" id="menu-icon"></iconify-icon>
+            </button>
+        </div>
+        <div id="mobile-menu" class="md:hidden flex flex-col gap-2 bg-neutral-950 border-t border-white/5 px-6 py-4" role="navigation" aria-label="Mobile navigation">
+            <a href="/about.html" class="text-lg font-light text-white hover:text-orange-500 py-2 transition-colors" onclick="toggleMenu()">About</a>
+            <a href="/podcast.html" class="text-lg font-light text-white hover:text-orange-500 py-2 transition-colors" onclick="toggleMenu()">Podcast</a>
+            <a href="/authority.html" class="text-lg font-light text-white hover:text-orange-500 py-2 transition-colors" onclick="toggleMenu()">Authority</a>
+            <a href="/media.html" class="text-lg font-light text-white hover:text-orange-500 py-2 transition-colors" onclick="toggleMenu()">Media</a>
+            <a href="/form.html" class="mt-2 px-6 py-3 bg-orange-600 text-white rounded text-sm font-medium text-center hover:bg-orange-500 transition-all shadow-[0_0_15px_rgba(234,88,12,0.3)]" onclick="toggleMenu()">Book Strategy Call</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-20 relative">
+        <!-- Background decorative glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[500px] bg-orange-900/10 blur-[100px] rounded-full pointer-events-none animate-pulse-slow"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+            <!-- Header & Search Section -->
+            <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-20">
+                <div class="fade-up inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 w-fit mb-6">
+                    <span class="text-[10px] font-medium text-orange-500 tracking-wider uppercase">The Archive</span>
+                </div>
+
+                <h1 class="fade-up delay-100 text-3xl sm:text-4xl lg:text-5xl font-medium text-white tracking-tight leading-[1.1] mb-6">
+                    Distinguished <span class="font-serif italic text-neutral-500">Voices</span>
+                </h1>
+
+                <p class="fade-up delay-200 text-lg font-light text-neutral-400 leading-relaxed mb-10">
+                    Explore the industry leaders, visionaries, and disruptors who have shared their blueprint on the show.
+                </p>
+
+                <!-- Search Bar -->
+                <div class="fade-up delay-300 w-full relative group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative flex items-center bg-neutral-900 border border-white/10 rounded-full shadow-2xl transition-all duration-300 focus-within:border-orange-500/50 focus-within:ring-1 focus-within:ring-orange-500/20">
+                        <div class="pl-5 text-neutral-500 flex items-center pointer-events-none">
+                            <iconify-icon icon="solar:magnifer-linear" width="20"></iconify-icon>
+                        </div>
+                        <input type="text" id="guestSearch" placeholder="Search guests by name or company..." class="w-full bg-transparent border-none text-white placeholder:text-neutral-600 focus:ring-0 focus:outline-none py-4 px-4 text-sm font-light">
+                        <div class="pr-2">
+                             <button class="p-2 bg-neutral-800 hover:bg-neutral-700 rounded-full text-neutral-400 transition-colors">
+                                <iconify-icon icon="solar:sort-vertical-linear" width="18"></iconify-icon>
+                             </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guests Grid -->
+            <div id="guestGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 fade-up delay-300">
+
+                <!-- Guest 1 -->
+                <a href="/guest.html" class="guest-card group relative bg-neutral-900 border border-white/5 rounded-2xl overflow-hidden block" data-name="Elena Vance" data-company="Stripe">
+                    <div class="guest-image-container h-72 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" alt="Elena Vance" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-neutral-950/80 backdrop-blur text-white text-[10px] font-medium px-2 py-1 rounded border border-white/10">Ep. 142</span>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-white text-lg font-medium tracking-tight group-hover:text-orange-500 transition-colors">Elena Vance</h3>
+                                <p class="text-sm text-neutral-500 font-light">Head of Product, Stripe</p>
+                            </div>
+                            <div class="text-neutral-600 group-hover:text-white transition-colors transform -rotate-45 group-hover:rotate-0 duration-300">
+                                <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex gap-2">
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Fintech</span>
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Scaling</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Guest 2 -->
+                <a href="/guest.html" class="guest-card group relative bg-neutral-900 border border-white/5 rounded-2xl overflow-hidden block" data-name="Marcus Chen" data-company="Vercel">
+                    <div class="guest-image-container h-72 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop" alt="Marcus Chen" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-neutral-950/80 backdrop-blur text-white text-[10px] font-medium px-2 py-1 rounded border border-white/10">Ep. 141</span>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-white text-lg font-medium tracking-tight group-hover:text-orange-500 transition-colors">Marcus Chen</h3>
+                                <p class="text-sm text-neutral-500 font-light">VP Engineering, Vercel</p>
+                            </div>
+                            <div class="text-neutral-600 group-hover:text-white transition-colors transform -rotate-45 group-hover:rotate-0 duration-300">
+                                <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex gap-2">
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">DevTools</span>
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Cloud</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Guest 3 -->
+                <a href="/guest.html" class="guest-card group relative bg-neutral-900 border border-white/5 rounded-2xl overflow-hidden block" data-name="Sarah Johnson" data-company="Linear">
+                    <div class="guest-image-container h-72 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop" alt="Sarah Johnson" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-neutral-950/80 backdrop-blur text-white text-[10px] font-medium px-2 py-1 rounded border border-white/10">Ep. 140</span>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-white text-lg font-medium tracking-tight group-hover:text-orange-500 transition-colors">Sarah Johnson</h3>
+                                <p class="text-sm text-neutral-500 font-light">Design Director, Linear</p>
+                            </div>
+                            <div class="text-neutral-600 group-hover:text-white transition-colors transform -rotate-45 group-hover:rotate-0 duration-300">
+                                <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex gap-2">
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Design</span>
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">UX/UI</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Guest 4 -->
+                <a href="/guest.html" class="guest-card group relative bg-neutral-900 border border-white/5 rounded-2xl overflow-hidden block" data-name="David Park" data-company="OpenAI">
+                    <div class="guest-image-container h-72 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop" alt="David Park" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-neutral-950/80 backdrop-blur text-white text-[10px] font-medium px-2 py-1 rounded border border-white/10">Ep. 139</span>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-white text-lg font-medium tracking-tight group-hover:text-orange-500 transition-colors">David Park</h3>
+                                <p class="text-sm text-neutral-500 font-light">Research Scientist, OpenAI</p>
+                            </div>
+                            <div class="text-neutral-600 group-hover:text-white transition-colors transform -rotate-45 group-hover:rotate-0 duration-300">
+                                <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex gap-2">
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">AI/ML</span>
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Future</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Guest 5 -->
+                <a href="/guest.html" class="guest-card group relative bg-neutral-900 border border-white/5 rounded-2xl overflow-hidden block" data-name="Olivia Sterling" data-company="Figma">
+                    <div class="guest-image-container h-72 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=600&auto=format&fit=crop" alt="Olivia Sterling" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-neutral-950/80 backdrop-blur text-white text-[10px] font-medium px-2 py-1 rounded border border-white/10">Ep. 138</span>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-white text-lg font-medium tracking-tight group-hover:text-orange-500 transition-colors">Olivia Sterling</h3>
+                                <p class="text-sm text-neutral-500 font-light">CMO, Figma</p>
+                            </div>
+                            <div class="text-neutral-600 group-hover:text-white transition-colors transform -rotate-45 group-hover:rotate-0 duration-300">
+                                <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex gap-2">
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Marketing</span>
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Brand</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Guest 6 -->
+                <a href="/guest.html" class="guest-card group relative bg-neutral-900 border border-white/5 rounded-2xl overflow-hidden block" data-name="James Thorne" data-company="Sequoia">
+                    <div class="guest-image-container h-72 w-full overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop" alt="James Thorne" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-neutral-950/80 backdrop-blur text-white text-[10px] font-medium px-2 py-1 rounded border border-white/10">Ep. 137</span>
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-white text-lg font-medium tracking-tight group-hover:text-orange-500 transition-colors">James Thorne</h3>
+                                <p class="text-sm text-neutral-500 font-light">Partner, Sequoia</p>
+                            </div>
+                            <div class="text-neutral-600 group-hover:text-white transition-colors transform -rotate-45 group-hover:rotate-0 duration-300">
+                                <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex gap-2">
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Venture</span>
+                            <span class="text-[10px] text-neutral-500 bg-white/5 px-2 py-1 rounded border border-white/5">Strategy</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Empty State (Hidden by default) -->
+            <div id="noResults" class="hidden text-center py-20 fade-up">
+                <div class="bg-neutral-900/50 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-4 border border-white/5">
+                    <iconify-icon icon="solar:magnifer-linear" width="24" class="text-neutral-500"></iconify-icon>
+                </div>
+                <h3 class="text-white font-medium text-lg">No guests found</h3>
+                <p class="text-neutral-500 text-sm mt-2">Try searching for a different name or company.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-950 pt-20 pb-10 border-t border-white/5 font-sans relative">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-orange-900/5 blur-[100px] rounded-full pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-16 border-b border-white/5">
+                <div class="max-w-lg">
+                    <h3 class="text-xl font-medium text-white mb-2">Subscribe to our newsletter.</h3>
+                    <p class="text-sm text-neutral-400 font-light">Join 10,000+ leaders receiving weekly insights on authority marketing and media strategy.</p>
+                </div>
+                <form class="flex w-full md:w-auto gap-2">
+                    <input type="email" placeholder="Enter your email" class="w-full md:w-64 bg-neutral-900 border border-white/10 rounded-md px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-orange-500 transition-colors">
+                    <button type="button" class="bg-orange-600 text-white px-6 py-3 rounded-md text-sm font-medium hover:bg-orange-500 transition-colors shadow-[0_0_15px_rgba(234,88,12,0.2)]">Subscribe</button>
+                </form>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-12 pt-16 pb-12">
+                <div class="col-span-2 lg:col-span-4 flex flex-col gap-6 pr-8">
+                    <a href="/" class="group"><img src="/authority-media-network-navbar-logo.svg" alt="Authority Media Network" class="h-8 md:h-10 w-auto transition-opacity group-hover:opacity-80"></a>
+                    <p class="text-sm text-neutral-500 font-light leading-relaxed max-w-sm">Authority Media Network transforms experts into industry icons. We build, manage, and scale your personal brand ecosystem through premium media assets.</p>
+                    <div class="flex items-center gap-2 text-xs text-neutral-600 mt-auto">
+                        <div class="flex items-center gap-1">
+                            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                            <span>Systems Operational</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 lg:col-span-2">
+                    <h4 class="text-white font-medium mb-6">Company</h4>
+                    <ul class="flex flex-col gap-4 text-sm font-light text-neutral-400">
+                        <li><a href="/" class="hover:text-orange-500 transition-colors">Home</a></li>
+                        <li><a href="/about.html" class="hover:text-orange-500 transition-colors">About</a></li>
+                        <li><a href="/podcast.html" class="hover:text-orange-500 transition-colors">Podcast</a></li>
+                        <li><a href="/authority.html" class="hover:text-orange-500 transition-colors">Authority</a></li>
+                        <li><a href="/media.html" class="hover:text-orange-500 transition-colors">Media</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-1 lg:col-span-2">
+                    <h4 class="text-white font-medium mb-6">Solutions</h4>
+                    <ul class="flex flex-col gap-4 text-sm font-light text-neutral-400">
+                        <li><a href="/guest.html" class="hover:text-orange-500 transition-colors">Guests</a></li>
+                        <li><a href="https://valiantceo.com/" class="hover:text-orange-500 transition-colors">ValiantCEO</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2 lg:col-span-4 grid grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-white font-medium mb-6">Legal</h4>
+                        <ul class="flex flex-col gap-4 text-sm font-light text-neutral-400">
+                            <li><a href="#" class="hover:text-orange-500 transition-colors">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-orange-500 transition-colors">Terms of Service</a></li>
+                            <li><a href="#" class="hover:text-orange-500 transition-colors">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium mb-6">Connect</h4>
+                        <ul class="flex flex-col gap-4 text-sm font-light text-neutral-400">
+                            <li class="flex items-center gap-2 group cursor-pointer">
+                                <iconify-icon icon="solar:letter-linear" class="group-hover:text-orange-500 transition-colors"></iconify-icon>
+                                <span class="group-hover:text-white transition-colors">hello@amn.media</span>
+                            </li>
+                            <li class="flex items-center gap-2 group cursor-pointer">
+                                <iconify-icon icon="solar:map-point-linear" class="group-hover:text-orange-500 transition-colors"></iconify-icon>
+                                <span class="group-hover:text-white transition-colors">New York, NY</span>
+                            </li>
+                        </ul>
+                        <div class="flex gap-4 mt-8">
+                            <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300"><iconify-icon icon="ri:facebook-line" width="20"></iconify-icon></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300"><iconify-icon icon="ri:instagram-line" width="20"></iconify-icon></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300"><iconify-icon icon="ri:linkedin-line" width="20"></iconify-icon></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300"><iconify-icon icon="ri:youtube-line" width="20"></iconify-icon></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-white/5 text-xs text-neutral-600">
+                <p>&copy; 2024 Authority Media Network. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-orange-500 transition-colors">Sitemap</a>
+                    <a href="#" class="hover:text-orange-500 transition-colors">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

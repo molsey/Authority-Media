@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authority Program — Authority Media Network</title>
+    <meta name="description" content="Get featured, build real authority. Our podcast program transforms your expertise into media influence.">
+    <meta property="og:title" content="Authority Program — Authority Media Network">
+    <meta property="og:description" content="Get featured. Build real authority.">
+    <meta property="og:type" content="website">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="bg-neutral-950 text-neutral-400 antialiased selection:bg-orange-500/20 selection:text-orange-200 overflow-x-hidden">
+
+<nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="/" class="z-50 relative group"><img src="/authority-media-network-navbar-logo.svg" alt="Authority Media Network" class="h-8 md:h-10 w-auto transition-opacity group-hover:opacity-80"></a>
+        <div class="hidden md:flex items-center gap-8 text-sm font-normal">
+            <a href="/about.html" class="hover:text-white transition-colors duration-200">About</a>
+            <a href="/podcast.html" class="hover:text-white transition-colors duration-200">Podcast</a>
+            <a href="/authority.html" class="hover:text-white transition-colors duration-200">Authority</a>
+            <a href="/media.html" class="hover:text-white transition-colors duration-200">Media</a>
+        </div>
+        <div class="hidden md:flex items-center gap-4">
+            <a href="#" class="group flex items-center gap-2 bg-orange-600 text-white px-4 py-2 rounded text-xs font-medium hover:bg-orange-500 transition-all shadow-[0_0_15px_rgba(234,88,12,0.3)] hover:shadow-[0_0_25px_rgba(234,88,12,0.5)]">Book Strategy Call<iconify-icon icon="solar:arrow-right-linear" class="transition-transform group-hover:translate-x-1"></iconify-icon></a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-white hover:text-orange-500 transition-colors z-50 relative" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu"><iconify-icon icon="solar:hamburger-menu-linear" width="24" id="menu-icon"></iconify-icon></button>
+    </div>
+    <div id="mobile-menu" class="md:hidden flex flex-col gap-2 bg-neutral-950 border-t border-white/5 px-6 py-4" role="navigation" aria-label="Mobile navigation">
+        <a href="/about.html" class="text-lg font-light text-white hover:text-orange-500 py-2 transition-colors" onclick="toggleMenu()">About</a>
+        <a href="/podcast.html" class="text-lg font-light text-white hover:text-orange-500 py-2 transition-colors" onclick="toggleMenu()">Podcast</a>
+        <a href="/authority.html" class="text-lg font-light text-white hover:text-orange-500 py-2 transition-colors" onclick="toggleMenu()">Authority</a>
+        <a href="/media.html" class="text-lg font-light text-white hover:text-orange-500 py-2 transition-colors" onclick="toggleMenu()">Media</a>
+        <a href="/blueprint.html" class="mt-2 px-6 py-3 bg-orange-600 text-white rounded text-sm font-medium text-center hover:bg-orange-500 transition-all shadow-[0_0_15px_rgba(234,88,12,0.3)]" onclick="toggleMenu()">Book Strategy Call</a>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden min-h-screen flex items-center">
+        <!-- Background decorative glows -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-orange-900/10 blur-[120px] rounded-full pointer-events-none animate-pulse-slow"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
+
+                <!-- Left Column: Copy & Trust -->
+                <div class="flex flex-col gap-8 text-center lg:text-left">
+
+                    <div class="fade-up inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 w-fit mx-auto lg:mx-0">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+                        </span>
+                        <span class="text-xs font-medium text-white tracking-wide uppercase">Booking Fall Interviews Now</span>
+                    </div>
+
+                    <h1 class="fade-up delay-100 text-3xl sm:text-5xl lg:text-7xl font-semibold text-white tracking-tight leading-[1.05]">
+                        Get Featured. <br>
+                        <span class="text-neutral-600 font-serif italic">Build Real Authority.</span>
+                    </h1>
+
+                    <div class="fade-up delay-200 space-y-6">
+                        <p class="text-lg font-light text-neutral-400 leading-relaxed">
+                            Authority Media Network helps qualified experts and business owners build instant credibility and long-term authority by placing them inside elite media platforms — including top-ranked podcasts and national business publications.
+                        </p>
+
+                        <p class="text-sm font-medium text-orange-500 flex items-center justify-center lg:justify-start gap-2">
+                            <iconify-icon icon="solar:record-circle-bold" class="animate-pulse"></iconify-icon>
+                            Recorded LIVE (Studio or Remote) inside Evolution Studios
+                        </p>
+                    </div>
+
+                    <!-- Bullet Points -->
+                    <div class="fade-up delay-300 grid gap-4 mt-2">
+                        <div class="flex items-start gap-4 p-4 rounded-lg bg-white/5 border border-white/5 hover:border-orange-500/30 transition-colors text-left">
+                            <div class="text-orange-500 mt-1"><iconify-icon icon="solar:shield-check-linear" width="24"></iconify-icon></div>
+                            <div>
+                                <h3 class="text-white font-medium text-sm">Unlock Instant Trust</h3>
+                                <p class="text-xs text-neutral-500 mt-1">Leverage the credibility of established podcasts and media platforms to accelerate trust in your brand.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-lg bg-white/5 border border-white/5 hover:border-orange-500/30 transition-colors text-left">
+                            <div class="text-orange-500 mt-1"><iconify-icon icon="solar:star-fall-linear" width="24"></iconify-icon></div>
+                            <div>
+                                <h3 class="text-white font-medium text-sm">Attract Premium Opportunities</h3>
+                                <p class="text-xs text-neutral-500 mt-1">Position yourself as the recognized authority people seek out, refer, and choose.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-lg bg-white/5 border border-white/5 hover:border-orange-500/30 transition-colors text-left">
+                            <div class="text-orange-500 mt-1"><iconify-icon icon="solar:folder-with-files-linear" width="24"></iconify-icon></div>
+                            <div>
+                                <h3 class="text-white font-medium text-sm">Create Authority Assets</h3>
+                                <p class="text-xs text-neutral-500 mt-1">Walk away with professional media, digital authority assets, and promotional content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="fade-up delay-400 pt-4">
+                        <button class="w-full sm:w-auto bg-orange-600 text-white px-8 py-4 rounded-md text-sm font-medium hover:bg-orange-500 transition-all flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(234,88,12,0.2)] hover:shadow-[0_0_30px_rgba(234,88,12,0.4)] group">
+                            Book Your Authority Interview
+                            <iconify-icon icon="solar:arrow-right-linear" width="18" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Representation -->
+                <div class="fade-up delay-200 relative group h-full flex items-center justify-center">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-orange-600/20 to-transparent rounded-full blur-[100px] opacity-20"></div>
+
+                    <!-- Main Image container mimicking a high-end broadcast setup -->
+                    <div class="relative w-full aspect-[4/5] md:aspect-square rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-neutral-900">
+                        <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Evolution Studios Broadcast Setup" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent"></div>
+
+                        <!-- Overlay UI Elements -->
+                        <div class="absolute top-6 right-6">
+                            <div class="bg-red-600/90 text-white text-[10px] font-bold px-2 py-1 rounded flex items-center gap-1 backdrop-blur-md animate-pulse">
+                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span> ON AIR
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-8 left-8 right-8">
+                            <div class="bg-neutral-950/80 backdrop-blur-md border border-white/10 p-4 rounded-xl">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <div class="w-10 h-10 rounded-full bg-orange-600 flex items-center justify-center text-white">
+                                        <iconify-icon icon="solar:microphone-3-linear" width="20"></iconify-icon>
+                                    </div>
+                                    <div>
+                                        <div class="text-white text-sm font-medium">Evolution Studios</div>
+                                        <div class="text-neutral-500 text-xs">Broadcast Quality &bull; 4K Video</div>
+                                    </div>
+                                </div>
+                                <div class="h-1 w-full bg-neutral-800 rounded-full overflow-hidden flex items-center gap-0.5">
+                                    <div class="h-full w-1 bg-orange-500 animate-[pulse_1s_ease-in-out_infinite]"></div>
+                                    <div class="h-full w-1 bg-orange-500 animate-[pulse_1.2s_ease-in-out_infinite]"></div>
+                                    <div class="h-full w-1 bg-orange-500 animate-[pulse_0.8s_ease-in-out_infinite]"></div>
+                                    <div class="h-full w-1 bg-orange-500 animate-[pulse_1.5s_ease-in-out_infinite]"></div>
+                                    <div class="h-full w-1 bg-orange-500 animate-[pulse_1.1s_ease-in-out_infinite]"></div>
+                                    <div class="h-full w-1 bg-orange-500 animate-[pulse_0.9s_ease-in-out_infinite]"></div>
+                                    <div class="h-full w-1 bg-orange-500 animate-[pulse_1.3s_ease-in-out_infinite]"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <section class="py-10 border-y border-white/5 bg-neutral-900/30">
+        <div class="relative w-full overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-neutral-950 to-transparent z-10"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-neutral-950 to-transparent z-10"></div>
+            <div class="flex w-max animate-scroll items-center">
+                <!-- Logos -->
+                <div class="flex items-center gap-16 px-8">
+                    <img src="/wealthdefined.svg" alt="Wealth Defined" class="h-10">
+                    <img src="/valiantceo.svg" alt="Valiant CEO" class="h-10">
+                    <img src="/corporate examinar.svg" alt="Corporate Examiner" class="h-10">
+                    <img src="/wellness voice.svg" alt="Wellness Voice" class="h-10">
+                    <img src="/feedvoice.svg" alt="Feed Voice" class="h-10">
+                    <img src="/Advisors-Magazine-1024x724.png" alt="Advisors Magazine" class="h-10 logo-invert">
+                    <img src="/CEOmonthly-1024x724.png" alt="CEO Monthly" class="h-10 logo-invert">
+                    <img src="/Founders-Magazine-1024x724.png" alt="Founders Magazine" class="h-10 logo-invert">
+                    <img src="/Invest-Courier-2-1024x724.png" alt="Invest Courier" class="h-10 logo-invert">
+                    <img src="/Pioneer-Daily-1024x724.png" alt="Pioneer Daily" class="h-10 logo-invert">
+                    <img src="/Profit-Tribune-1024x724.png" alt="Profit Tribune" class="h-10 logo-invert">
+                    <img src="/Strive-1024x724.png" alt="STRIVE" class="h-10 logo-invert">
+                </div>
+                <!-- Duplicate for Loop -->
+                <div class="flex items-center gap-16 px-8">
+                    <img src="/wealthdefined.svg" alt="Wealth Defined" class="h-10">
+                    <img src="/valiantceo.svg" alt="Valiant CEO" class="h-10">
+                    <img src="/corporate examinar.svg" alt="Corporate Examiner" class="h-10">
+                    <img src="/wellness voice.svg" alt="Wellness Voice" class="h-10">
+                    <img src="/feedvoice.svg" alt="Feed Voice" class="h-10">
+                    <img src="/Advisors-Magazine-1024x724.png" alt="Advisors Magazine" class="h-10 logo-invert">
+                    <img src="/CEOmonthly-1024x724.png" alt="CEO Monthly" class="h-10 logo-invert">
+                    <img src="/Founders-Magazine-1024x724.png" alt="Founders Magazine" class="h-10 logo-invert">
+                    <img src="/Invest-Courier-2-1024x724.png" alt="Invest Courier" class="h-10 logo-invert">
+                    <img src="/Pioneer-Daily-1024x724.png" alt="Pioneer Daily" class="h-10 logo-invert">
+                    <img src="/Profit-Tribune-1024x724.png" alt="Profit Tribune" class="h-10 logo-invert">
+                    <img src="/Strive-1024x724.png" alt="STRIVE" class="h-10 logo-invert">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Authority Podcast Program -->
+    <section id="program" class="py-24 relative bg-neutral-950">
+        <!-- Background Elements -->
+        <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-orange-500/20 to-transparent"></div>
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-900/5 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-orange-900/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-20 fade-up">
+                <span class="text-orange-500 text-xs font-bold tracking-widest uppercase mb-4 block">The Methodology</span>
+                <h2 class="text-3xl lg:text-5xl font-medium text-white tracking-tight mb-6">
+                    The Authority Podcast Program
+                </h2>
+                <p class="text-xl text-neutral-400 font-light max-w-3xl mx-auto leading-relaxed">
+                    A done-for-you authority promotion system designed to increase your credibility, visibility, and influence—with fast and lasting results.
+                </p>
+            </div>
+
+            <!-- Program Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 01 -->
+                <div class="fade-up delay-100 group relative flex flex-col rounded-3xl bg-neutral-900/40 border border-white/5 overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-900/10">
+                    <!-- Image Header -->
+                    <div class="h-64 w-full relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent z-10"></div>
+                        <img src="/authority strategy.png" alt="Authority Strategy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+
+                        <!-- Big Number -->
+                        <div class="absolute -bottom-5 left-6 z-20">
+                            <span class="text-8xl font-semibold text-white/20 tracking-tighter group-hover:text-orange-500/30 transition-colors duration-500 font-serif drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">01</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 pt-6 relative z-20 flex-1 flex flex-col">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-white mb-2">Authority Strategy</h3>
+                            <div class="text-sm text-neutral-400 font-medium">Instant Credibility &amp; Branding</div>
+                        </div>
+
+                        <p class="text-sm text-neutral-500 leading-relaxed mb-6">
+                            We align your message, narrative, and positioning so your authority is intentional — not accidental.
+                        </p>
+
+                        <ul class="space-y-3 mt-auto pt-6 border-t border-white/5">
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-orange-500 mt-0.5 flex-shrink-0"></iconify-icon>
+                                <span class="text-xs text-neutral-400">Strategically crafted questions</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-orange-500 mt-0.5 flex-shrink-0"></iconify-icon>
+                                <span class="text-xs text-neutral-400">SEO Optimized Content</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 02 -->
+                <div class="fade-up delay-200 group relative flex flex-col rounded-3xl bg-neutral-900/40 border border-white/5 overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-900/10">
+                    <!-- Image Header -->
+                    <div class="h-64 w-full relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent z-10"></div>
+                        <img src="/flagship interview.png" alt="Flagship Interview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+
+                        <!-- Big Number -->
+                        <div class="absolute -bottom-5 left-6 z-20">
+                            <span class="text-8xl font-semibold text-white/20 tracking-tighter group-hover:text-orange-500/30 transition-colors duration-500 font-serif drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">02</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 pt-6 relative z-20 flex-1 flex flex-col">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-white mb-2">Flagship Interview</h3>
+                            <div class="text-sm text-neutral-400 font-medium">Thought Leadership Positioning</div>
+                        </div>
+
+                        <p class="text-sm text-neutral-500 leading-relaxed mb-6">
+                            Be professionally interviewed on a top-ranked podcast designed to elevate your authority.
+                        </p>
+
+                        <ul class="space-y-3 mt-auto pt-6 border-t border-white/5">
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-orange-500 mt-0.5 flex-shrink-0"></iconify-icon>
+                                <span class="text-xs text-neutral-400">Long-form video interview</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-orange-500 mt-0.5 flex-shrink-0"></iconify-icon>
+                                <span class="text-xs text-neutral-400">Syndicated to 12+ platforms</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 03 -->
+                <div class="fade-up delay-300 group relative flex flex-col rounded-3xl bg-neutral-900/40 border border-white/5 overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-900/10">
+                    <!-- Image Header -->
+                    <div class="h-64 w-full relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent z-10"></div>
+                        <img src="/magazine feature.webp" alt="Magazine Feature" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+
+                        <!-- Big Number -->
+                        <div class="absolute -bottom-5 left-6 z-20">
+                            <span class="text-8xl font-semibold text-white/20 tracking-tighter group-hover:text-orange-500/30 transition-colors duration-500 font-serif drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">03</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 pt-6 relative z-20 flex-1 flex flex-col">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-white mb-2">Magazine Feature</h3>
+                            <div class="text-sm text-neutral-400 font-medium">The Ultimate Status Symbol</div>
+                        </div>
+
+                        <p class="text-sm text-neutral-500 leading-relaxed mb-6">
+                            Gain editorial-style exposure in a national business publication to reinforce trust and credibility.
+                        </p>
+
+                        <ul class="space-y-3 mt-auto pt-6 border-t border-white/5">
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-orange-500 mt-0.5 flex-shrink-0"></iconify-icon>
+                                <span class="text-xs text-neutral-400">Custom-designed cover</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-orange-500 mt-0.5 flex-shrink-0"></iconify-icon>
+                                <span class="text-xs text-neutral-400">Exclusive interview profile</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 04 -->
+                <div class="fade-up delay-100 group relative flex flex-col rounded-3xl bg-neutral-900/40 border border-white/5 overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-900/10">
+                    <!-- Image Header -->
+                    <div class="h-64 w-full relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent z-10"></div>
+                        <img src="/social assets.webp" alt="Social Assets" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+
+                        <!-- Big Number -->
+                        <div class="absolute -bottom-5 left-6 z-20">
+                            <span class="text-8xl font-semibold text-white/20 tracking-tighter group-hover:text-orange-500/30 transition-colors duration-500 font-serif drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">04</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 pt-6 relative z-20 flex-1 flex flex-col">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-white mb-2">Social Assets</h3>
+                            <div class="text-sm text-neutral-400 font-medium">Content for Omnipresence</div>
+                        </div>
+
+                        <p class="text-sm text-neutral-500 leading-relaxed mb-6">
+                            Professionally produced content for your website, social media, and marketing.
+                        </p>
+
+                        <ul class="space-y-3 mt-auto pt-6 border-t border-white/5">
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-orange-500 mt-0.5 flex-shrink-0"></iconify-icon>
+                                <span class="text-xs text-neutral-400">Reels, Shorts &amp; Highlights</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-orange-500 mt-0.5 flex-shrink-0"></iconify-icon>
+                                <span class="text-xs text-neutral-400">Full YouTube Episode</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 05 -->
+                <div class="fade-up delay-200 group relative flex flex-col rounded-3xl bg-neutral-900/40 border border-white/5 overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-900/10">
+                    <!-- Image Header -->
+                    <div class="h-64 w-full relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent z-10"></div>
+                        <img src="/authority hub.webp" alt="Authority Hub" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+
+                        <!-- Big Number -->
+                        <div class="absolute -bottom-5 left-6 z-20">
+                            <span class="text-8xl font-semibold text-white/20 tracking-tighter group-hover:text-orange-500/30 transition-colors duration-500 font-serif drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">05</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 pt-6 relative z-20 flex-1 flex flex-col">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-white mb-2">Authority Hub</h3>
+                            <div class="text-sm text-neutral-400 font-medium">Your Media Showcase</div>
+                        </div>
+
+                        <p class="text-sm text-neutral-500 leading-relaxed mb-6">
+                            Centralize your credibility with digital assets designed for conversion and trust.
+                        </p>
+
+                        <ul class="space-y-3 mt-auto pt-6 border-t border-white/5">
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-orange-500 mt-0.5 flex-shrink-0"></iconify-icon>
+                                <span class="text-xs text-neutral-400">Mobile Video Landing Page</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-orange-500 mt-0.5 flex-shrink-0"></iconify-icon>
+                                <span class="text-xs text-neutral-400">NFC &amp; QR Code Sharing</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 06 -->
+                <div class="fade-up delay-300 group relative flex flex-col rounded-3xl bg-neutral-900/40 border border-white/5 overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-900/10">
+                    <!-- Image Header -->
+                    <div class="h-64 w-full relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent z-10"></div>
+                        <img src="/distribution.webp" alt="Distribution" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+
+                        <!-- Big Number -->
+                        <div class="absolute -bottom-5 left-6 z-20">
+                            <span class="text-8xl font-semibold text-white/20 tracking-tighter group-hover:text-orange-500/30 transition-colors duration-500 font-serif drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">06</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 pt-6 relative z-20 flex-1 flex flex-col">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-white mb-2">Distribution</h3>
+                            <div class="text-sm text-neutral-400 font-medium">Amplified Brand Attention</div>
+                        </div>
+
+                        <p class="text-sm text-neutral-500 leading-relaxed mb-6">
+                            Your authority amplified across multiple channels to ensure it's seen, shared, and remembered.
+                        </p>
+
+                        <ul class="space-y-3 mt-auto pt-6 border-t border-white/5">
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-orange-500 mt-0.5 flex-shrink-0"></iconify-icon>
+                                <span class="text-xs text-neutral-400">Social Media Promotion</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <iconify-icon icon="solar:check-circle-bold" class="text-orange-500 mt-0.5 flex-shrink-0"></iconify-icon>
+                                <span class="text-xs text-neutral-400">Media Press Release</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Program CTA -->
+            <div class="mt-20 fade-up">
+                <div class="p-1 rounded-2xl bg-gradient-to-r from-orange-600/20 via-orange-600/5 to-transparent">
+                    <div class="bg-neutral-900 rounded-xl p-8 lg:p-12 text-center border border-white/5 relative overflow-hidden">
+                         <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:14px_14px] opacity-20"></div>
+                         <div class="relative z-10 flex flex-col items-center gap-6">
+                             <h3 class="text-2xl font-medium text-white">Ready to position yourself as the authority in your market?</h3>
+                             <button class="bg-white text-neutral-950 px-8 py-4 rounded-md text-sm font-semibold hover:bg-neutral-200 transition-all flex items-center gap-2 shadow-lg">
+                                Get Started Now
+                                <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                             </button>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evolution Studios Section -->
+    <section id="studio" class="py-24 relative overflow-hidden bg-neutral-950">
+        <!-- Grid Background -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-orange-500 text-xs font-bold tracking-widest uppercase mb-3 block">The Venue</span>
+                <h2 class="text-3xl lg:text-5xl font-medium text-white tracking-tight mb-4">
+                    Inside Evolution Studios
+                </h2>
+                <p class="text-neutral-400 font-light max-w-2xl mx-auto">
+                    Your interview takes place in our state-of-the-art broadcast facility. Designed for high-end audio and 4K cinema-grade video production.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Feature 1 -->
+                <div class="fade-up delay-100 group p-6 rounded-xl bg-neutral-900 border border-white/5 hover:border-orange-500/30 transition-all">
+                    <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="solar:videocamera-record-linear" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-white font-medium text-lg mb-2">Cinema-Grade 4K</h3>
+                    <p class="text-sm text-neutral-400">Multi-cam production using RED Komodo and Sony FX6 cameras for Netflix-quality visuals.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="fade-up delay-200 group p-6 rounded-xl bg-neutral-900 border border-white/5 hover:border-orange-500/30 transition-all">
+                    <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="solar:earth-linear" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-white font-medium text-lg mb-2">Remote Capability</h3>
+                    <p class="text-sm text-neutral-400">Can't fly to the studio? Our virtual production suite ensures you look pro from anywhere in the world.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="fade-up delay-300 group p-6 rounded-xl bg-neutral-900 border border-white/5 hover:border-orange-500/30 transition-all">
+                    <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="solar:users-group-rounded-linear" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-white font-medium text-lg mb-2">Professional Crew</h3>
+                    <p class="text-sm text-neutral-400">Directed by producers with network TV experience to guide your performance.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 rounded-2xl overflow-hidden border border-white/10 h-64 md:h-96 relative fade-up delay-400">
+                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Studio Wide Shot" class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-white/20 transition-all">
+                        <iconify-icon icon="solar:gallery-wide-linear"></iconify-icon>
+                        View Studio Gallery
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study: Jed Morley -->
+    <section id="case-study" class="py-24 relative overflow-hidden bg-neutral-950 border-t border-white/5">
+        <div class="absolute inset-0 bg-gradient-to-b from-neutral-950 to-neutral-900"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Left: Stats & Copy -->
+                <div class="fade-up">
+                    <div class="inline-flex items-center gap-2 mb-6 opacity-70">
+                        <span class="h-px w-8 bg-orange-500"></span>
+                        <span class="text-orange-500 uppercase tracking-widest text-xs font-bold">Case Study</span>
+                    </div>
+
+                    <h2 class="text-3xl lg:text-5xl font-medium text-white tracking-tight mb-2">
+                        From Expert to <br>Recognized Authority
+                    </h2>
+                    <p class="text-xl text-neutral-400 font-light mb-8">Leading the Global Payment Revolution</p>
+
+                    <div class="mb-8">
+                         <div class="text-5xl lg:text-6xl font-semibold text-white tracking-tighter mb-2 bg-gradient-to-r from-white to-neutral-500 bg-clip-text text-transparent">
+                             59,178%
+                         </div>
+                         <div class="text-sm text-orange-500 font-medium tracking-wide uppercase flex items-center gap-2">
+                            <iconify-icon icon="solar:graph-up-bold"></iconify-icon> Surge in B2B Visibility
+                         </div>
+                    </div>
+
+                    <div class="prose prose-sm prose-invert text-neutral-400 font-light leading-relaxed mb-8 max-w-none">
+                        <p class="mb-4">
+                            Jed Morley, CEO of Platinum Payment Systems, faced the challenge of elevating his status from a successful executive to a recognized industry authority. Partnering with Authority Media Network and Valiant CEO Magazine, he implemented a focused authority marketing strategy centered on high-impact thought leadership content.
+                        </p>
+                        <p>
+                             The results were transformative: in a single year, his total profile and post views skyrocketed from 7,201 to <strong class="text-white font-medium">4,267,882</strong>. This massive surge directly translated into significant business outcomes, revenue growth, and strategic partnerships with industry leaders.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4 border-t border-white/10 pt-8">
+                        <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full border border-white/5">
+                            <iconify-icon icon="solar:check-circle-bold" class="text-orange-500"></iconify-icon>
+                            <span class="text-white text-xs font-medium uppercase tracking-wide">More Business</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full border border-white/5">
+                            <iconify-icon icon="solar:check-circle-bold" class="text-orange-500"></iconify-icon>
+                            <span class="text-white text-xs font-medium uppercase tracking-wide">More Credibility</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full border border-white/5">
+                            <iconify-icon icon="solar:check-circle-bold" class="text-orange-500"></iconify-icon>
+                            <span class="text-white text-xs font-medium uppercase tracking-wide">More Impact</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Visual -->
+                <div class="fade-up delay-200 relative">
+                    <!-- Card representation -->
+                    <div class="relative rounded-2xl bg-neutral-800 p-8 border border-white/5 shadow-2xl overflow-hidden group">
+                        <!-- Branding -->
+                        <div class="flex justify-between items-center mb-8">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-blue-600 rounded-md flex items-center justify-center text-white font-bold">P</div>
+                                <div>
+                                    <span class="text-white font-bold text-sm tracking-tight block">Platinum</span>
+                                    <span class="text-neutral-400 text-[10px] tracking-widest uppercase block">Payment Systems</span>
+                                </div>
+                            </div>
+                            <div class="px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-[10px] text-orange-400 uppercase tracking-wide font-medium">Valiant CEO Feature</div>
+                        </div>
+
+                        <!-- Founder Image -->
+                        <div class="flex gap-5 mb-8 items-center">
+                            <div class="w-20 h-20 rounded-full border-2 border-orange-500 p-1 relative">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full h-full rounded-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                                <div class="absolute bottom-0 right-0 bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center text-white border-2 border-neutral-800">
+                                    <iconify-icon icon="solar:link-circle-bold" width="12"></iconify-icon>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium text-xl">Jed Morley</h4>
+                                <p class="text-neutral-400 text-sm mb-1">CEO, Platinum Payment Systems</p>
+                                <div class="flex items-center gap-1 text-[10px] text-neutral-500 bg-black/20 px-2 py-0.5 rounded w-fit">
+                                    <iconify-icon icon="solar:users-group-rounded-linear"></iconify-icon>
+                                    <span>Top Voice: Payments &amp; Fintech</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Growth Graph Visual -->
+                        <div class="bg-neutral-900/50 rounded-lg p-4 border border-white/5 relative overflow-hidden">
+                            <div class="flex justify-between items-end mb-2">
+                                <div class="text-xs text-neutral-500">Total Views</div>
+                                <div class="text-lg font-bold text-white tracking-tight">4,267,882</div>
+                            </div>
+
+                            <!-- Graph SVG -->
+                            <div class="relative h-24 w-full">
+                                <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-orange-500/10 to-transparent"></div>
+                                <svg class="w-full h-full overflow-visible" viewBox="0 0 100 50" preserveAspectRatio="none">
+                                    <!-- Flat line then spike -->
+                                    <path d="M0 48 L 20 47 L 40 46 L 50 40 L 60 25 L 70 15 L 80 5 L 90 2 L 100 0" fill="none" stroke="#f97316" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+                                    <!-- Points -->
+                                    <circle cx="0" cy="48" r="1.5" fill="#525252"></circle>
+                                    <circle cx="100" cy="0" r="2" fill="#fff" class="animate-pulse"></circle>
+                                </svg>
+                            </div>
+
+                            <div class="flex justify-between text-[10px] text-neutral-600 mt-2 font-mono">
+                                <span>Day 1 (7,201)</span>
+                                <span>Day 365 (4.2M)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Stat Badge -->
+                    <div class="absolute -top-6 -right-6 bg-neutral-950 border border-white/10 p-4 rounded-xl shadow-xl flex items-center gap-3 animate-float hidden lg:flex">
+                        <div class="w-10 h-10 bg-green-900/20 text-green-500 rounded-lg flex items-center justify-center">
+                            <iconify-icon icon="solar:chart-2-bold" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <div class="text-white text-sm font-bold">Revenue Surge</div>
+                            <div class="text-neutral-500 text-[10px]">Direct Result of Authority</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 border-y border-white/5 bg-neutral-900/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl lg:text-4xl font-medium text-white tracking-tight mb-4">
+                    Trusted by Industry Leaders
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Testimonial 1 -->
+                <div class="fade-up delay-100 flex flex-col p-8 rounded-xl bg-neutral-900 border border-white/5">
+                    <p class="font-serif text-neutral-300 italic mb-6 leading-relaxed">
+                        "I was skeptical about the 'instant authority' claim, but the AMN team delivered. The studio experience was world-class, and the assets I got back have completely overhauled my marketing."
+                    </p>
+                    <div class="mt-auto flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-neutral-800 border border-white/10 overflow-hidden"><img src="https://i.pravatar.cc/150?img=68" class="w-full h-full object-cover"></div>
+                        <div>
+                            <div class="text-sm font-medium text-white">Sarah Jenkins</div>
+                            <div class="text-xs text-neutral-500">Founder, Apex Consulting</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="fade-up delay-200 flex flex-col p-8 rounded-xl bg-neutral-900 border border-white/5">
+                    <p class="font-serif text-neutral-300 italic mb-6 leading-relaxed">
+                        "Getting featured gave me the social proof I needed to raise my prices. Clients don't question my rates anymore—they see the magazine cover and they're sold."
+                    </p>
+                    <div class="mt-auto flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-neutral-800 border border-white/10 overflow-hidden"><img src="https://i.pravatar.cc/150?img=15" class="w-full h-full object-cover"></div>
+                        <div>
+                            <div class="text-sm font-medium text-white">David Ross</div>
+                            <div class="text-xs text-neutral-500">Real Estate Investor</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="fade-up delay-300 flex flex-col p-8 rounded-xl bg-neutral-900 border border-white/5">
+                    <p class="font-serif text-neutral-300 italic mb-6 leading-relaxed">
+                        "Efficiency is key for me. 60 minutes in the studio turned into 3 months of content. The ROI on this package is undeniable."
+                    </p>
+                    <div class="mt-auto flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-neutral-800 border border-white/10 overflow-hidden"><img src="https://i.pravatar.cc/150?img=44" class="w-full h-full object-cover"></div>
+                        <div>
+                            <div class="text-sm font-medium text-white">Elena Rodriguez</div>
+                            <div class="text-xs text-neutral-500">Keynote Speaker</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-neutral-950">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl lg:text-4xl font-medium text-white tracking-tight mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-neutral-400 font-light">Everything you need to know about the interview process.</p>
+            </div>
+
+            <div class="space-y-4 fade-up delay-100">
+                <!-- Question 1 -->
+                <div class="bg-neutral-900/50 border border-white/5 rounded-lg overflow-hidden transition-all duration-300">
+                    <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="text-white font-medium">Do I need to come to the studio?</span>
+                        <iconify-icon icon="solar:add-circle-linear" width="24" class="faq-icon text-neutral-500 transition-transform duration-300"></iconify-icon>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-neutral-400 font-light leading-relaxed text-sm">While we recommend the full Evolution Studios experience for the highest production value, we offer a high-fidelity Remote Production kit and virtual direction, ensuring you look broadcast-ready from your home or office.</p>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-neutral-900/50 border border-white/5 rounded-lg overflow-hidden transition-all duration-300">
+                    <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="text-white font-medium">How long does the process take?</span>
+                        <iconify-icon icon="solar:add-circle-linear" width="24" class="faq-icon text-neutral-500 transition-transform duration-300"></iconify-icon>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-neutral-400 font-light leading-relaxed text-sm">The interview itself takes about 60-90 minutes. From recording to receiving your full suite of edited assets (podcast, magazine article, clips), the turnaround is typically 14-21 days.</p>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-neutral-900/50 border border-white/5 rounded-lg overflow-hidden transition-all duration-300">
+                    <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="text-white font-medium">Where will my interview be distributed?</span>
+                        <iconify-icon icon="solar:add-circle-linear" width="24" class="faq-icon text-neutral-500 transition-transform duration-300"></iconify-icon>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-neutral-400 font-light leading-relaxed text-sm">Your audio interview will be distributed to all major podcast platforms (Apple, Spotify, Amazon, Google). Your video assets will be hosted on YouTube and provided to you for social media. The magazine feature is published in our network of digital business publications.</p>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="bg-neutral-900/50 border border-white/5 rounded-lg overflow-hidden transition-all duration-300">
+                    <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="text-white font-medium">Can I use the content for ads?</span>
+                        <iconify-icon icon="solar:add-circle-linear" width="24" class="faq-icon text-neutral-500 transition-transform duration-300"></iconify-icon>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-neutral-400 font-light leading-relaxed text-sm">Absolutely. You own 100% of the rights to the assets we create. Many clients see their highest ROAS (Return on Ad Spend) when running ads to these authority assets rather than a generic sales page.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 border-t border-white/5 relative overflow-hidden">
+        <div class="absolute inset-0 bg-orange-600/5"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl lg:text-5xl font-semibold text-white tracking-tight mb-6">
+                Ready to Become the Authority?
+            </h2>
+            <p class="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto">
+                Spots in Evolution Studios are limited. Secure your interview slot today and start building the trust your business deserves.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button class="w-full sm:w-auto bg-orange-600 text-white px-8 py-4 rounded-md text-sm font-medium hover:bg-orange-500 transition-all shadow-xl hover:shadow-orange-500/20 flex items-center justify-center gap-2">
+                    Book Authority Interview
+                    <iconify-icon icon="solar:calendar-add-linear"></iconify-icon>
+                </button>
+                <button class="w-full sm:w-auto bg-neutral-900 border border-white/10 text-white px-8 py-4 rounded-md text-sm font-medium hover:bg-neutral-800 transition-all">
+                    Talk to a Producer
+                </button>
+            </div>
+            <div class="mt-8 flex items-center justify-center gap-2 text-xs text-neutral-500">
+                <iconify-icon icon="solar:shield-check-linear" class="text-orange-500"></iconify-icon>
+                <span>100% Satisfaction Guarantee on Production Quality</span>
+            </div>
+        </div>
+    </section>
+
+<footer class="bg-neutral-950 pt-20 pb-10 border-t border-white/5 font-sans relative">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-orange-900/5 blur-[100px] rounded-full pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-16 border-b border-white/5">
+            <div class="max-w-lg"><h3 class="text-xl font-medium text-white mb-2">Subscribe to our newsletter.</h3><p class="text-sm text-neutral-400 font-light">Join 10,000+ leaders receiving weekly insights on authority marketing and media strategy.</p></div>
+            <form class="flex w-full md:w-auto gap-2"><input type="email" placeholder="Enter your email" class="w-full md:w-64 bg-neutral-900 border border-white/10 rounded-md px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-orange-500 transition-colors"><button type="button" class="bg-orange-600 text-white px-6 py-3 rounded-md text-sm font-medium hover:bg-orange-500 transition-colors shadow-[0_0_15px_rgba(234,88,12,0.2)]">Subscribe</button></form>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-12 pt-16 pb-12">
+            <div class="col-span-2 lg:col-span-4 flex flex-col gap-6 pr-8"><a href="/" class="group"><img src="/authority-media-network-navbar-logo.svg" alt="Authority Media Network" class="h-8 md:h-10 w-auto transition-opacity group-hover:opacity-80"></a><p class="text-sm text-neutral-500 font-light leading-relaxed max-w-sm">Authority Media Network transforms experts into industry icons. We build, manage, and scale your personal brand ecosystem through premium media assets.</p><div class="flex items-center gap-2 text-xs text-neutral-600 mt-auto"><div class="flex items-center gap-1"><div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div><span>Systems Operational</span></div></div></div>
+            <div class="col-span-1 lg:col-span-2"><h4 class="text-white font-medium mb-6">Company</h4><ul class="flex flex-col gap-4 text-sm font-light text-neutral-400"><li><a href="/" class="hover:text-orange-500 transition-colors">Home</a></li><li><a href="/about.html" class="hover:text-orange-500 transition-colors">About</a></li><li><a href="/podcast.html" class="hover:text-orange-500 transition-colors">Podcast</a></li><li><a href="/authority.html" class="hover:text-orange-500 transition-colors">Authority</a></li><li><a href="/media.html" class="hover:text-orange-500 transition-colors">Media</a></li></ul></div>
+            <div class="col-span-1 lg:col-span-2"><h4 class="text-white font-medium mb-6">Solutions</h4><ul class="flex flex-col gap-4 text-sm font-light text-neutral-400"><li><a href="/guest.html" class="hover:text-orange-500 transition-colors">Guests</a></li><li><a href="https://valiantceo.com/" class="hover:text-orange-500 transition-colors">ValiantCEO</a></li></ul></div>
+            <div class="col-span-2 lg:col-span-4 grid grid-cols-2 gap-8"><div><h4 class="text-white font-medium mb-6">Legal</h4><ul class="flex flex-col gap-4 text-sm font-light text-neutral-400"><li><a href="#" class="hover:text-orange-500 transition-colors">Privacy Policy</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Terms of Service</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Cookie Policy</a></li></ul></div><div><h4 class="text-white font-medium mb-6">Connect</h4><ul class="flex flex-col gap-4 text-sm font-light text-neutral-400"><li class="flex items-center gap-2 group cursor-pointer"><iconify-icon icon="solar:letter-linear" class="group-hover:text-orange-500 transition-colors"></iconify-icon><span class="group-hover:text-white transition-colors">hello@amn.media</span></li><li class="flex items-center gap-2 group cursor-pointer"><iconify-icon icon="solar:map-point-linear" class="group-hover:text-orange-500 transition-colors"></iconify-icon><span class="group-hover:text-white transition-colors">New York, NY</span></li></ul><div class="flex gap-4 mt-8"><a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300"><iconify-icon icon="ri:facebook-line" width="20"></iconify-icon></a><a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300"><iconify-icon icon="ri:instagram-line" width="20"></iconify-icon></a><a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300"><iconify-icon icon="ri:linkedin-line" width="20"></iconify-icon></a><a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300"><iconify-icon icon="ri:youtube-line" width="20"></iconify-icon></a></div></div></div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-white/5 text-xs text-neutral-600"><p>&copy; 2024 Authority Media Network. All rights reserved.</p><div class="flex items-center gap-6"><a href="#" class="hover:text-orange-500 transition-colors">Sitemap</a><a href="#" class="hover:text-orange-500 transition-colors">Accessibility</a></div></div>
+    </div>
+</footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

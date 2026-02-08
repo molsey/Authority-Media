@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Authority Media Network</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Inter', sans-serif; }
+.font-serif { font-family: 'Playfair Display', serif; }
+/* Custom scrollbar hide */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+/* Marquee Animation */
+@keyframes scroll {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+.animate-scroll {
+animation: scroll 30s linear infinite;
+}
+.animate-scroll:hover {
+animation-play-state: paused;
+}
+/* Fade Up Animation Classes */
+.fade-up {
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+will-change: opacity, transform;
+}
+.fade-up.visible {
+opacity: 1;
+transform: translateY(0);
+}
+/* Staggered Delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+/* Subtle Glow Pulse */
+@keyframes pulse-glow {
+0%, 100% { opacity: 0.1; transform: translate(-50%, 0) scale(1); }
+50% { opacity: 0.15; transform: translate(-50%, 0) scale(1.1); }
+}
+.animate-pulse-slow {
+animation: pulse-glow 8s ease-in-out infinite;
+}
+</style></head>
+<body class="bg-neutral-950 text-neutral-400 antialiased selection:bg-orange-500/20 selection:text-orange-200 overflow-x-hidden">
+
+<!-- Background (component) added by Aura -->
+<div class="aura-background-component fixed top-0 w-full h-screen -z-10" data-alpha-mask="80" style="; mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent)"><div class="aura-background-component top-0 w-full -z-10 absolute h-full">
+  <div data-us-project="yWZ2Tbe094Fsjgy9NRnD" class="absolute w-full h-full left-0 top-0 -z-10"></div>
+  <script type="text/javascript">
+    !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+  </script>
+</div></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="text-white font-medium tracking-tighter text-xl uppercase group hover:text-orange-500 transition-colors z-50 relative">
+                AMN.
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-normal">
+                <a href="#services" class="hover:text-white transition-colors duration-200">Services</a>
+                <a href="#about" class="hover:text-white transition-colors duration-200">About</a>
+                <a href="#blueprint" class="hover:text-white transition-colors duration-200">The Blueprint</a>
+            </div>
+
+            <!-- CTA -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#" class="text-sm hover:text-white transition-colors">Login</a>
+                <a href="#" class="group flex items-center gap-2 bg-orange-600 text-white px-4 py-2 rounded text-xs font-medium hover:bg-orange-500 transition-all shadow-[0_0_15px_rgba(234,88,12,0.3)] hover:shadow-[0_0_25px_rgba(234,88,12,0.5)]">
+                    Book Strategy Call
+                    <iconify-icon icon="solar:arrow-right-linear" class="transition-transform group-hover:translate-x-1"></iconify-icon>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Icon -->
+            <button id="mobile-menu-btn" class="md:hidden text-white hover:text-orange-500 transition-colors z-50 relative">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24" id="menu-icon"></iconify-icon>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-neutral-950 z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
+            <a href="#services" class="text-2xl font-light text-white hover:text-orange-500" onclick="toggleMenu()">Services</a>
+            <a href="#about" class="text-2xl font-light text-white hover:text-orange-500" onclick="toggleMenu()">About</a>
+            <a href="#blueprint" class="text-2xl font-light text-white hover:text-orange-500" onclick="toggleMenu()">The Blueprint</a>
+            <a href="#" class="mt-4 px-8 py-4 bg-orange-600 text-white rounded text-lg font-medium" onclick="toggleMenu()">Book Strategy Call</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
+        <!-- Background decorative glows -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-orange-900/10 blur-[120px] rounded-full pointer-events-none animate-pulse-slow"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                
+                <!-- Left Column: Copy & Trust -->
+                <div class="flex flex-col gap-8 text-center lg:text-left">
+                    
+                    <!-- Trust Badge -->
+                    <div class="fade-up inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 w-fit mx-auto lg:mx-0">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                        <span class="text-xs font-medium text-white tracking-wide uppercase">Accepting New Clients</span>
+                    </div>
+
+                    <h1 class="fade-up delay-100 text-4xl sm:text-5xl lg:text-6xl font-medium text-white tracking-tight leading-[1.1]">
+                        The #1 strategy to grow your business is <span class="text-neutral-500 italic font-serif">authority marketing.</span>
+                    </h1>
+                    
+                    <p class="fade-up delay-200 text-lg font-light text-neutral-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Stop chasing leads. Become the industry leader that everyone wants to work with. We build your entire media ecosystem for you.
+                    </p>
+
+                    <!-- Trust Indicators & CTA -->
+                    <div class="fade-up delay-300 flex flex-col gap-6 items-center lg:items-start">
+                        <button class="bg-orange-600 text-white px-8 py-4 rounded-md text-sm font-medium hover:bg-orange-500 transition-all w-full sm:w-auto flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(234,88,12,0.2)] hover:shadow-[0_0_30px_rgba(234,88,12,0.4)] group">
+                            <iconify-icon icon="solar:calendar-add-linear" width="18" class="group-hover:scale-110 transition-transform"></iconify-icon>
+                            Book a Strategy Call
+                        </button>
+
+                        <div class="flex items-center gap-4 text-xs text-neutral-500 border-t border-white/5 pt-6 w-full justify-center lg:justify-start">
+                            <div class="flex -space-x-2">
+                                <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-950 flex items-center justify-center overflow-hidden"><img src="https://i.pravatar.cc/100?img=11" alt="User" class="opacity-80"></div>
+                                <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-950 flex items-center justify-center overflow-hidden"><img src="https://i.pravatar.cc/100?img=33" alt="User" class="opacity-80"></div>
+                                <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-950 flex items-center justify-center overflow-hidden"><img src="https://i.pravatar.cc/100?img=12" alt="User" class="opacity-80"></div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex text-orange-500 gap-0.5">
+                                    <iconify-icon icon="solar:star-bold" width="12"></iconify-icon>
+                                    <iconify-icon icon="solar:star-bold" width="12"></iconify-icon>
+                                    <iconify-icon icon="solar:star-bold" width="12"></iconify-icon>
+                                    <iconify-icon icon="solar:star-bold" width="12"></iconify-icon>
+                                    <iconify-icon icon="solar:star-bold" width="12"></iconify-icon>
+                                </div>
+                                <span>Trusted by 500+ CEOs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: VSL Embed -->
+                <div class="fade-up delay-200 relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-orange-600/20 to-neutral-800 rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative aspect-video rounded-lg bg-neutral-900 border border-white/10 overflow-hidden shadow-2xl flex items-center justify-center cursor-pointer">
+                        <!-- Placeholder for VSL Video -->
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1600&amp;q=80')] bg-cover bg-center opacity-40 transition-transform duration-700 group-hover:scale-105"></div>
+                        <div class="absolute inset-0 bg-neutral-950/40"></div>
+                        
+                        <button class="relative z-10 w-20 h-20 bg-orange-600/90 backdrop-blur-sm text-white rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(234,88,12,0.4)] transition-all hover:scale-110 hover:bg-orange-500 group-hover:shadow-[0_0_50px_rgba(234,88,12,0.6)]">
+                            <iconify-icon icon="solar:play-bold" width="32" class="ml-1"></iconify-icon>
+                        </button>
+                        
+                        <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end text-xs font-medium text-white/80">
+                            <span class="bg-black/50 px-2 py-1 rounded backdrop-blur-sm border border-white/5">How Authority Works</span>
+                            <span class="bg-black/50 px-2 py-1 rounded backdrop-blur-sm border border-white/5">02:45</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Magazine Scroll Section (Infinite Marquee) -->
+    <section class="py-12 border-y border-white/5 bg-neutral-900/20">
+        <div class="max-w-7xl mx-auto px-6 mb-10 fade-up">
+            <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-center text-neutral-500">
+                Growing global brands for 30 years
+            </h2>
+        </div>
+        
+        <!-- Marquee Container -->
+        <div class="relative w-full overflow-hidden group">
+            <!-- Gradient Masks -->
+            <div class="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-neutral-950 to-transparent z-10"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-neutral-950 to-transparent z-10"></div>
+            
+            <!-- Scrolling Content -->
+            <div class="flex w-max animate-scroll">
+                <!-- Set 1 -->
+                <div class="flex items-center gap-12 px-6">
+                    <div class="w-32 h-40 bg-neutral-900/50 border border-white/5 rounded-sm flex flex-col items-center justify-center p-4 hover:border-orange-500/30 hover:bg-neutral-800 transition-all cursor-default">
+                        <span class="text-2xl font-serif text-white/40">FORBES</span>
+                        <div class="w-8 h-[1px] bg-white/10 my-2"></div>
+                        <div class="w-full h-16 bg-neutral-800 rounded-sm opacity-50"></div>
+                    </div>
+                    <div class="w-32 h-40 bg-neutral-900/50 border border-white/5 rounded-sm flex flex-col items-center justify-center p-4 hover:border-orange-500/30 hover:bg-neutral-800 transition-all cursor-default">
+                        <span class="text-2xl font-serif text-white/40">TIME</span>
+                        <div class="w-8 h-[1px] bg-white/10 my-2"></div>
+                        <div class="w-full h-16 bg-neutral-800 rounded-sm opacity-50"></div>
+                    </div>
+                    <div class="w-32 h-40 bg-neutral-900/50 border border-white/5 rounded-sm flex flex-col items-center justify-center p-4 hover:border-orange-500/30 hover:bg-neutral-800 transition-all cursor-default">
+                        <span class="text-2xl font-serif text-white/40">WIRED</span>
+                        <div class="w-8 h-[1px] bg-white/10 my-2"></div>
+                        <div class="w-full h-16 bg-neutral-800 rounded-sm opacity-50"></div>
+                    </div>
+                    <div class="w-32 h-40 bg-neutral-900/50 border border-white/5 rounded-sm flex flex-col items-center justify-center p-4 hover:border-orange-500/30 hover:bg-neutral-800 transition-all cursor-default">
+                        <span class="text-2xl font-serif text-white/40">INC.</span>
+                        <div class="w-8 h-[1px] bg-white/10 my-2"></div>
+                        <div class="w-full h-16 bg-neutral-800 rounded-sm opacity-50"></div>
+                    </div>
+                    <div class="w-32 h-40 bg-neutral-900/50 border border-white/5 rounded-sm flex flex-col items-center justify-center p-4 hover:border-orange-500/30 hover:bg-neutral-800 transition-all cursor-default">
+                        <span class="text-2xl font-serif text-white/40">HBR</span>
+                        <div class="w-8 h-[1px] bg-white/10 my-2"></div>
+                        <div class="w-full h-16 bg-neutral-800 rounded-sm opacity-50"></div>
+                    </div>
+                    <div class="w-32 h-40 bg-neutral-900/50 border border-white/5 rounded-sm flex flex-col items-center justify-center p-4 hover:border-orange-500/30 hover:bg-neutral-800 transition-all cursor-default">
+                        <span class="text-2xl font-serif text-white/40">VOGUE</span>
+                        <div class="w-8 h-[1px] bg-white/10 my-2"></div>
+                        <div class="w-full h-16 bg-neutral-800 rounded-sm opacity-50"></div>
+                    </div>
+                    <div class="w-32 h-40 bg-neutral-900/50 border border-white/5 rounded-sm flex flex-col items-center justify-center p-4 hover:border-orange-500/30 hover:bg-neutral-800 transition-all cursor-default">
+                        <span class="text-2xl font-serif text-white/40">FORTUNE</span>
+                        <div class="w-8 h-[1px] bg-white/10 my-2"></div>
+                        <div class="w-full h-16 bg-neutral-800 rounded-sm opacity-50"></div>
+                    </div>
+                </div>
+
+                <!-- Set 2 (Duplicate for Seamless Loop) -->
+                <div class="flex items-center gap-12 px-6">
+                   <div class="w-32 h-40 bg-neutral-900/50 border border-white/5 rounded-sm flex flex-col items-center justify-center p-4 hover:border-orange-500/30 hover:bg-neutral-800 transition-all cursor-default">
+                        <span class="text-2xl font-serif text-white/40">FORBES</span>
+                        <div class="w-8 h-[1px] bg-white/10 my-2"></div>
+                        <div class="w-full h-16 bg-neutral-800 rounded-sm opacity-50"></div>
+                    </div>
+                    <div class="w-32 h-40 bg-neutral-900/50 border border-white/5 rounded-sm flex flex-col items-center justify-center p-4 hover:border-orange-500/30 hover:bg-neutral-800 transition-all cursor-default">
+                        <span class="text-2xl font-serif text-white/40">TIME</span>
+                        <div class="w-8 h-[1px] bg-white/10 my-2"></div>
+                        <div class="w-full h-16 bg-neutral-800 rounded-sm opacity-50"></div>
+                    </div>
+                    <div class="w-32 h-40 bg-neutral-900/50 border border-white/5 rounded-sm flex flex-col items-center justify-center p-4 hover:border-orange-500/30 hover:bg-neutral-800 transition-all cursor-default">
+                        <span class="text-2xl font-serif text-white/40">WIRED</span>
+                        <div class="w-8 h-[1px] bg-white/10 my-2"></div>
+                        <div class="w-full h-16 bg-neutral-800 rounded-sm opacity-50"></div>
+                    </div>
+                    <div class="w-32 h-40 bg-neutral-900/50 border border-white/5 rounded-sm flex flex-col items-center justify-center p-4 hover:border-orange-500/30 hover:bg-neutral-800 transition-all cursor-default">
+                        <span class="text-2xl font-serif text-white/40">INC.</span>
+                        <div class="w-8 h-[1px] bg-white/10 my-2"></div>
+                        <div class="w-full h-16 bg-neutral-800 rounded-sm opacity-50"></div>
+                    </div>
+                    <div class="w-32 h-40 bg-neutral-900/50 border border-white/5 rounded-sm flex flex-col items-center justify-center p-4 hover:border-orange-500/30 hover:bg-neutral-800 transition-all cursor-default">
+                        <span class="text-2xl font-serif text-white/40">HBR</span>
+                        <div class="w-8 h-[1px] bg-white/10 my-2"></div>
+                        <div class="w-full h-16 bg-neutral-800 rounded-sm opacity-50"></div>
+                    </div>
+                    <div class="w-32 h-40 bg-neutral-900/50 border border-white/5 rounded-sm flex flex-col items-center justify-center p-4 hover:border-orange-500/30 hover:bg-neutral-800 transition-all cursor-default">
+                        <span class="text-2xl font-serif text-white/40">VOGUE</span>
+                        <div class="w-8 h-[1px] bg-white/10 my-2"></div>
+                        <div class="w-full h-16 bg-neutral-800 rounded-sm opacity-50"></div>
+                    </div>
+                    <div class="w-32 h-40 bg-neutral-900/50 border border-white/5 rounded-sm flex flex-col items-center justify-center p-4 hover:border-orange-500/30 hover:bg-neutral-800 transition-all cursor-default">
+                        <span class="text-2xl font-serif text-white/40">FORTUNE</span>
+                        <div class="w-8 h-[1px] bg-white/10 my-2"></div>
+                        <div class="w-full h-16 bg-neutral-800 rounded-sm opacity-50"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Authority Marketing -->
+    <section class="py-24 lg:py-32 relative" id="about">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="lg:grid lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Title -->
+                <div class="lg:col-span-4 mb-12 lg:mb-0 sticky top-24 fade-up">
+                    <h2 class="text-3xl lg:text-4xl font-medium text-white tracking-tight mb-6">
+                        What is Authority Marketing?
+                    </h2>
+                    <p class="text-neutral-400 font-light leading-relaxed mb-6">
+                        It's the shift from chasing clients to attracting them. By positioning your brand as the definitive expert, you create a gravitational pull that makes sales effortless.
+                    </p>
+                    <a href="#" class="text-orange-500 text-sm border-b border-orange-500/30 pb-0.5 hover:border-orange-500 transition-colors inline-flex items-center gap-1 group">
+                        Learn more about our philosophy
+                        <iconify-icon icon="solar:arrow-right-linear" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                    </a>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="lg:col-span-8 grid md:grid-cols-2 gap-6">
+                    
+                    <!-- Feature 1 -->
+                    <div class="fade-up delay-100 p-6 rounded-lg bg-neutral-900/50 border border-white/5 hover:border-orange-500/20 transition-all duration-300 group hover:bg-neutral-900">
+                        <div class="w-10 h-10 rounded-full bg-orange-600/10 flex items-center justify-center text-orange-500 mb-4 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
+                            <iconify-icon icon="solar:microphone-3-linear" width="24"></iconify-icon>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2">Strategic Podcasting</h3>
+                        <p class="text-sm text-neutral-400 font-light">
+                            Own the conversation in your niche with a done-for-you audio experience that builds intimacy and trust at scale.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="fade-up delay-200 p-6 rounded-lg bg-neutral-900/50 border border-white/5 hover:border-orange-500/20 transition-all duration-300 group hover:bg-neutral-900">
+                        <div class="w-10 h-10 rounded-full bg-orange-600/10 flex items-center justify-center text-orange-500 mb-4 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
+                            <iconify-icon icon="solar:notebook-linear" width="24"></iconify-icon>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2">Editorial Magazines</h3>
+                        <p class="text-sm text-neutral-400 font-light">
+                            Physical and digital publications that showcase your thought leadership and separate you from commodity competitors.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="fade-up delay-300 p-6 rounded-lg bg-neutral-900/50 border border-white/5 hover:border-orange-500/20 transition-all duration-300 group hover:bg-neutral-900">
+                        <div class="w-10 h-10 rounded-full bg-orange-600/10 flex items-center justify-center text-orange-500 mb-4 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
+                            <iconify-icon icon="solar:graph-up-linear" width="24"></iconify-icon>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2">Technology &amp; Distribution</h3>
+                        <p class="text-sm text-neutral-400 font-light">
+                            Leverage our proprietary tech stack to distribute your content across hundreds of high-authority channels instantly.
+                        </p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="fade-up delay-400 p-6 rounded-lg bg-neutral-900/50 border border-white/5 hover:border-orange-500/20 transition-all duration-300 group hover:bg-neutral-900">
+                        <div class="w-10 h-10 rounded-full bg-orange-600/10 flex items-center justify-center text-orange-500 mb-4 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
+                            <iconify-icon icon="solar:users-group-rounded-linear" width="24"></iconify-icon>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2">Brand Positioning</h3>
+                        <p class="text-sm text-neutral-400 font-light">
+                            Refine your message and visual identity to resonate with high-ticket clients and command premium pricing.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Empower -->
+    <section class="py-24 border-t border-white/5 relative overflow-hidden">
+        <!-- Subtle radial highlight behind section -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl bg-orange-900/5 blur-3xl rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+                <h2 class="text-3xl lg:text-4xl font-medium text-white tracking-tight mb-6">
+                    Who We Empower
+                </h2>
+                <p class="text-lg font-light text-neutral-400 leading-relaxed">
+                    We transform the expertise of high-achieving professionals into undeniable media influence.
+                </p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+                
+                <!-- Card 1: Thought Leaders -->
+                <div class="fade-up delay-100 flex flex-col p-8 rounded-xl bg-neutral-900/20 border border-white/5 hover:border-orange-500/30 transition-all duration-300 group hover:bg-neutral-900/40 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-lg bg-neutral-800 border border-white/5 flex items-center justify-center text-neutral-400 mb-6 group-hover:text-orange-500 group-hover:border-orange-500/30 transition-all">
+                        <iconify-icon icon="solar:user-speak-linear" width="28"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-medium text-white mb-2">Thought Leaders</h3>
+                    <p class="text-xs font-semibold text-orange-500 uppercase tracking-wider mb-4 opacity-80">Coaches • Authors • Speakers</p>
+                    <p class="text-sm text-neutral-400 font-light leading-relaxed flex-grow">
+                        Ready to amplify your message and build a dedicated global following. We turn your voice into a platform that commands attention.
+                    </p>
+                </div>
+
+                <!-- Card 2: Professionals -->
+                <div class="fade-up delay-200 flex flex-col p-8 rounded-xl bg-neutral-900/20 border border-white/5 hover:border-orange-500/30 transition-all duration-300 group hover:bg-neutral-900/40 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-lg bg-neutral-800 border border-white/5 flex items-center justify-center text-neutral-400 mb-6 group-hover:text-orange-500 group-hover:border-orange-500/30 transition-all">
+                        <iconify-icon icon="solar:diploma-linear" width="28"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-medium text-white mb-2">Professionals</h3>
+                    <p class="text-xs font-semibold text-orange-500 uppercase tracking-wider mb-4 opacity-80">Attorneys • Doctors • Planners</p>
+                    <p class="text-sm text-neutral-400 font-light leading-relaxed flex-grow">
+                        Looking to build credibility, attract high-value clients, and stand out in a crowded market. Elevate your practice above the competition.
+                    </p>
+                </div>
+
+                <!-- Card 3: Business Owners -->
+                <div class="fade-up delay-300 flex flex-col p-8 rounded-xl bg-neutral-900/20 border border-white/5 hover:border-orange-500/30 transition-all duration-300 group hover:bg-neutral-900/40 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-lg bg-neutral-800 border border-white/5 flex items-center justify-center text-neutral-400 mb-6 group-hover:text-orange-500 group-hover:border-orange-500/30 transition-all">
+                        <iconify-icon icon="solar:buildings-2-linear" width="28"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-medium text-white mb-2">Business Leaders</h3>
+                    <p class="text-xs font-semibold text-orange-500 uppercase tracking-wider mb-4 opacity-80">Founders • Owners • Visionaries</p>
+                    <p class="text-sm text-neutral-400 font-light leading-relaxed flex-grow">
+                        Who want to scale their impact and dominate their niche through earned media. Turn your personal brand into a business asset.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="flex justify-center fade-up delay-400">
+                <a href="#" class="group inline-flex items-center gap-3 bg-white text-neutral-950 px-6 py-3 rounded font-medium text-sm hover:bg-neutral-200 transition-all">
+                    Start Your Authority Journey
+                    <iconify-icon icon="solar:arrow-right-linear" class="transition-transform group-hover:translate-x-1"></iconify-icon>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Our Media Solutions -->
+    <section id="services" class="py-24 bg-neutral-900/30 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <!-- Header -->
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl lg:text-4xl font-medium text-white tracking-tight mb-4">
+                    Our Media Solutions
+                </h2>
+                <p class="text-lg font-light text-neutral-400 max-w-2xl mx-auto">
+                    We have a solution for every stage of your journey. From foundational branding to a full-scale media operation.
+                </p>
+            </div>
+
+            <!-- Solutions Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Solution 1: Branding & PR -->
+                <div class="fade-up delay-100 group relative rounded-xl bg-neutral-950 border border-white/5 overflow-hidden hover:border-orange-500/30 transition-all duration-300 hover:shadow-lg">
+                    <div class="h-32 bg-neutral-900/50 relative overflow-hidden">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" class="w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-all duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-950"></div>
+                        <div class="absolute bottom-4 left-6 w-10 h-10 rounded-lg bg-neutral-800/80 backdrop-blur border border-white/10 flex items-center justify-center text-white group-hover:text-orange-500 transition-colors">
+                            <iconify-icon icon="solar:megaphone-linear" width="20"></iconify-icon>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-2">
+                        <h3 class="text-lg font-medium text-white mb-2">Branding &amp; PR</h3>
+                        <p class="text-sm text-neutral-400 font-light leading-relaxed">
+                            We handle all production and distribution, putting your voice in front of a new audience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Solution 2: Featured media interviews -->
+                <div class="fade-up delay-200 group relative rounded-xl bg-neutral-950 border border-white/5 overflow-hidden hover:border-orange-500/30 transition-all duration-300 hover:shadow-lg">
+                    <div class="h-32 bg-neutral-900/50 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" class="w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-all duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-950"></div>
+                        <div class="absolute bottom-4 left-6 w-10 h-10 rounded-lg bg-neutral-800/80 backdrop-blur border border-white/10 flex items-center justify-center text-white group-hover:text-orange-500 transition-colors">
+                             <iconify-icon icon="solar:videocamera-record-linear" width="20"></iconify-icon>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-2">
+                        <h3 class="text-lg font-medium text-white mb-2">Featured media interviews</h3>
+                        <p class="text-sm text-neutral-400 font-light leading-relaxed">
+                            Get your own professionally designed digital and print magazine.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Solution 3: Podcast setup & launch -->
+                <div class="fade-up delay-300 group relative rounded-xl bg-neutral-950 border border-white/5 overflow-hidden hover:border-orange-500/30 transition-all duration-300 hover:shadow-lg">
+                    <div class="h-32 bg-neutral-900/50 relative overflow-hidden">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg" class="w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-all duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-950"></div>
+                        <div class="absolute bottom-4 left-6 w-10 h-10 rounded-lg bg-neutral-800/80 backdrop-blur border border-white/10 flex items-center justify-center text-white group-hover:text-orange-500 transition-colors">
+                             <iconify-icon icon="solar:headphones-round-linear" width="20"></iconify-icon>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-2">
+                        <h3 class="text-lg font-medium text-white mb-2">Podcast setup &amp; launch</h3>
+                        <p class="text-sm text-neutral-400 font-light leading-relaxed">
+                            Your SEO-optimized hub for all your content.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Solution 4: Custom built magazines -->
+                <div class="fade-up delay-100 group relative rounded-xl bg-neutral-950 border border-white/5 overflow-hidden hover:border-orange-500/30 transition-all duration-300 hover:shadow-lg">
+                    <div class="h-32 bg-neutral-900/50 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" class="w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-all duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-950"></div>
+                        <div class="absolute bottom-4 left-6 w-10 h-10 rounded-lg bg-neutral-800/80 backdrop-blur border border-white/10 flex items-center justify-center text-white group-hover:text-orange-500 transition-colors">
+                             <iconify-icon icon="solar:book-2-linear" width="20"></iconify-icon>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-2">
+                        <h3 class="text-lg font-medium text-white mb-2">Custom built magazines</h3>
+                        <p class="text-sm text-neutral-400 font-light leading-relaxed">
+                            A direct line to your audience, building trust and engagement.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Solution 5: Marketing, SEO & AI tech -->
+                <div class="fade-up delay-200 group relative rounded-xl bg-neutral-950 border border-white/5 overflow-hidden hover:border-orange-500/30 transition-all duration-300 hover:shadow-lg">
+                    <div class="h-32 bg-neutral-900/50 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" class="w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-all duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-950"></div>
+                        <div class="absolute bottom-4 left-6 w-10 h-10 rounded-lg bg-neutral-800/80 backdrop-blur border border-white/10 flex items-center justify-center text-white group-hover:text-orange-500 transition-colors">
+                             <iconify-icon icon="solar:graph-new-linear" width="20"></iconify-icon>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-2">
+                        <h3 class="text-lg font-medium text-white mb-2">Marketing, SEO &amp; AI tech</h3>
+                        <p class="text-sm text-neutral-400 font-light leading-relaxed">
+                            We take your content and distribute it across all your social channels automatically.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Solution 6: Full media company -->
+                <div class="fade-up delay-300 group relative rounded-xl bg-neutral-950 border border-white/5 overflow-hidden hover:border-orange-500/30 transition-all duration-300 hover:shadow-lg">
+                    <div class="h-32 bg-neutral-900/50 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" class="w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-all duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-950"></div>
+                        <div class="absolute bottom-4 left-6 w-10 h-10 rounded-lg bg-neutral-800/80 backdrop-blur border border-white/10 flex items-center justify-center text-white group-hover:text-orange-500 transition-colors">
+                             <iconify-icon icon="solar:layers-minimalistic-linear" width="20"></iconify-icon>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-2">
+                        <h3 class="text-lg font-medium text-white mb-2">Full media company</h3>
+                        <p class="text-sm text-neutral-400 font-light leading-relaxed">
+                            We turn one interview into over 100 media assets, maximizing your impact from a single hour of your time.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-24 border-t border-white/5 bg-neutral-900/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl lg:text-4xl font-medium text-white tracking-tight mb-4">
+                    How it Works
+                </h2>
+                <p class="text-neutral-400 font-light max-w-lg mx-auto">
+                    A simple, transparent process designed to take you from unknown to industry authority in record time.
+                </p>
+            </div>
+
+            <div class="relative grid md:grid-cols-3 gap-8">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-12 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent w-3/4 mx-auto z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="fade-up delay-100 relative z-10 flex flex-col items-center text-center group">
+                    <div class="w-24 h-24 rounded-2xl bg-neutral-900 border border-white/5 flex items-center justify-center mb-8 shadow-lg group-hover:border-orange-500/30 group-hover:shadow-[0_0_25px_rgba(234,88,12,0.15)] transition-all duration-300">
+                        <div class="text-orange-500 group-hover:scale-110 transition-transform duration-300">
+                            <iconify-icon icon="solar:magnifer-linear" width="32"></iconify-icon>
+                        </div>
+                        <div class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-xs font-mono text-white group-hover:bg-orange-600 group-hover:border-orange-500 transition-colors">01</div>
+                    </div>
+                    <h3 class="text-xl font-medium text-white mb-3">Discovery &amp; Audit</h3>
+                    <p class="text-sm text-neutral-400 font-light leading-relaxed max-w-xs">
+                        We analyze your current brand footprint, identify gaps, and craft the high-level strategy to position you as the leader.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="fade-up delay-200 relative z-10 flex flex-col items-center text-center group">
+                    <div class="w-24 h-24 rounded-2xl bg-neutral-900 border border-white/5 flex items-center justify-center mb-8 shadow-lg group-hover:border-orange-500/30 group-hover:shadow-[0_0_25px_rgba(234,88,12,0.15)] transition-all duration-300">
+                        <div class="text-orange-500 group-hover:scale-110 transition-transform duration-300">
+                            <iconify-icon icon="solar:hammer-linear" width="32"></iconify-icon>
+                        </div>
+                        <div class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-xs font-mono text-white group-hover:bg-orange-600 group-hover:border-orange-500 transition-colors">02</div>
+                    </div>
+                    <h3 class="text-xl font-medium text-white mb-3">Create &amp; Build</h3>
+                    <p class="text-sm text-neutral-400 font-light leading-relaxed max-w-xs">
+                        Our team produces your magazine, podcasts, and articles while building the digital infrastructure to host them.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="fade-up delay-300 relative z-10 flex flex-col items-center text-center group">
+                    <div class="w-24 h-24 rounded-2xl bg-neutral-900 border border-white/5 flex items-center justify-center mb-8 shadow-lg group-hover:border-orange-500/30 group-hover:shadow-[0_0_25px_rgba(234,88,12,0.15)] transition-all duration-300">
+                        <div class="text-orange-500 group-hover:scale-110 transition-transform duration-300">
+                            <iconify-icon icon="solar:rocket-linear" width="32"></iconify-icon>
+                        </div>
+                        <div class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-xs font-mono text-white group-hover:bg-orange-600 group-hover:border-orange-500 transition-colors">03</div>
+                    </div>
+                    <h3 class="text-xl font-medium text-white mb-3">Launch &amp; Scale</h3>
+                    <p class="text-sm text-neutral-400 font-light leading-relaxed max-w-xs">
+                        We deploy your content across our network, launch your campaigns, and automate the inbound lead flow.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section (Blueprint) -->
+    <section id="blueprint" class="py-24 bg-neutral-900/30 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl lg:text-5xl font-medium text-white tracking-tight mb-4">
+                    Authority Media Provides a Blueprint<br> to Grow Your Business
+                </h2>
+                <p class="text-neutral-400 font-light max-w-2xl mx-auto">
+                    The market has changed. The tactics that worked 5 years ago are now ignored. See the difference between the old way and the Authority Model.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+                
+                <!-- Old Model Card -->
+                <div class="fade-up delay-100 relative p-8 rounded-xl border border-white/5 bg-neutral-950/50 hover:bg-neutral-950 transition-colors">
+                    <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/5">
+                        <h3 class="text-xl font-medium text-neutral-400">The Old Model</h3>
+                        <iconify-icon icon="solar:close-circle-linear" width="24" class="text-neutral-600"></iconify-icon>
+                    </div>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 opacity-60">
+                            <iconify-icon icon="solar:close-circle-linear" width="20" class="text-red-900/80 mt-0.5"></iconify-icon>
+                            <span class="text-sm font-light">Cold outreach and spammy DMs</span>
+                        </li>
+                        <li class="flex items-start gap-3 opacity-60">
+                            <iconify-icon icon="solar:close-circle-linear" width="20" class="text-red-900/80 mt-0.5"></iconify-icon>
+                            <span class="text-sm font-light">Rising ad costs with diminishing returns</span>
+                        </li>
+                        <li class="flex items-start gap-3 opacity-60">
+                            <iconify-icon icon="solar:close-circle-linear" width="20" class="text-red-900/80 mt-0.5"></iconify-icon>
+                            <span class="text-sm font-light">Fighting on price against competitors</span>
+                        </li>
+                        <li class="flex items-start gap-3 opacity-60">
+                            <iconify-icon icon="solar:close-circle-linear" width="20" class="text-red-900/80 mt-0.5"></iconify-icon>
+                            <span class="text-sm font-light">Low trust, high friction sales process</span>
+                        </li>
+                        <li class="flex items-start gap-3 opacity-60">
+                            <iconify-icon icon="solar:close-circle-linear" width="20" class="text-red-900/80 mt-0.5"></iconify-icon>
+                            <span class="text-sm font-light">Inconsistent lead flow</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- New Model Card -->
+                <div class="fade-up delay-200 relative p-8 rounded-xl border border-orange-500/20 bg-gradient-to-b from-neutral-900 to-neutral-950 shadow-2xl overflow-hidden group">
+                    <!-- Glow effect -->
+                    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-orange-500/40 to-transparent"></div>
+                    
+                    <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10 relative z-10">
+                        <h3 class="text-xl font-medium text-white">The Authority Model</h3>
+                        <iconify-icon icon="solar:check-circle-linear" width="24" class="text-orange-500"></iconify-icon>
+                    </div>
+                    
+                    <ul class="space-y-5 relative z-10">
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="solar:check-circle-bold" width="20" class="text-orange-500 mt-0.5"></iconify-icon>
+                            <span class="text-sm font-normal text-white">Inbound leads who already know &amp; trust you</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="solar:check-circle-bold" width="20" class="text-orange-500 mt-0.5"></iconify-icon>
+                            <span class="text-sm font-normal text-white">Organic reach through content assets</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="solar:check-circle-bold" width="20" class="text-orange-500 mt-0.5"></iconify-icon>
+                            <span class="text-sm font-normal text-white">Premium pricing power as the Expert</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="solar:check-circle-bold" width="20" class="text-orange-500 mt-0.5"></iconify-icon>
+                            <span class="text-sm font-normal text-white">Shorter sales cycles, higher close rates</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="solar:check-circle-bold" width="20" class="text-orange-500 mt-0.5"></iconify-icon>
+                            <span class="text-sm font-normal text-white">Predictable, scalable growth ecosystem</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-8 pt-6 border-t border-white/10 relative z-10">
+                         <button class="w-full py-3 bg-orange-600 text-white rounded font-medium text-sm hover:bg-orange-500 transition-colors flex justify-center items-center gap-2 shadow-[0_0_20px_rgba(234,88,12,0.2)]">
+                            Switch to Authority
+                            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Stats Section -->
+    <section class="pt-24 pb-0 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-orange-900/10 via-transparent to-transparent pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col items-center text-center mb-16 fade-up">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/20 bg-orange-500/5 mb-6">
+                    <span class="text-xs font-medium text-orange-500 tracking-wide">The expertise behind the Authority formula</span>
+                </div>
+                
+                <h2 class="text-3xl lg:text-5xl font-medium text-white tracking-tight mb-6 max-w-2xl">
+                    Built on 30+ Years of<br> Global Brand Building
+                </h2>
+                
+                <p class="text-lg font-light text-neutral-400 leading-relaxed max-w-3xl mx-auto">
+                    Our founders bring over three decades of experience in international brand building, publishing, and broadcasting. We've earned the trust of CEOs, thought leaders, and global entrepreneurs.
+                </p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10 border-y border-white/10 bg-neutral-900/10 backdrop-blur-sm fade-up delay-200">
+                
+                <!-- Stat 1 -->
+                <div class="flex flex-col items-center justify-center p-8 group">
+                    <div class="text-4xl lg:text-5xl font-semibold text-white tracking-tighter mb-2 group-hover:text-orange-500 transition-colors duration-300">
+                        100K+
+                    </div>
+                    <div class="flex items-center gap-2 text-neutral-500">
+                        <iconify-icon icon="solar:users-group-rounded-linear" width="18"></iconify-icon>
+                        <span class="text-sm font-medium uppercase tracking-widest">Readers</span>
+                    </div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="flex flex-col items-center justify-center p-8 group">
+                    <div class="text-4xl lg:text-5xl font-semibold text-white tracking-tighter mb-2 group-hover:text-orange-500 transition-colors duration-300">
+                        $1B
+                    </div>
+                    <div class="flex items-center gap-2 text-neutral-500">
+                        <iconify-icon icon="solar:wallet-money-linear" width="18"></iconify-icon>
+                        <span class="text-sm font-medium uppercase tracking-widest">Global Client Revenue</span>
+                    </div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="flex flex-col items-center justify-center p-8 group">
+                    <div class="text-4xl lg:text-5xl font-semibold text-white tracking-tighter mb-2 group-hover:text-orange-500 transition-colors duration-300">
+                        5K+
+                    </div>
+                    <div class="flex items-center gap-2 text-neutral-500">
+                        <iconify-icon icon="solar:microphone-3-linear" width="18"></iconify-icon>
+                        <span class="text-sm font-medium uppercase tracking-widest">Featured Interviews</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: The Ultimate Authority Formula -->
+    <section class="py-24 border-b border-white/5 bg-neutral-950">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl lg:text-5xl font-medium text-white tracking-tight mb-4">
+                    The Ultimate Authority Formula
+                </h2>
+                <p class="text-neutral-400 font-light max-w-2xl mx-auto text-lg">
+                    Our proven four-step formula broken down into actionable deliverables.
+                </p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid lg:grid-cols-2 gap-8">
+                
+                <!-- Step 1: Strategy -->
+                <div class="fade-up delay-100 group relative bg-neutral-900/40 border border-white/5 rounded-xl overflow-hidden hover:border-orange-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+                    <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-orange-500/50 transition-all duration-500"></div>
+                    
+                    <!-- Image Area -->
+                    <div class="relative h-56 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Strategy" class="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-700 grayscale group-hover:grayscale-0">
+                        
+                        <div class="absolute top-6 left-6 z-20">
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-neutral-950/80 border border-white/10 text-orange-500 text-sm font-mono backdrop-blur-sm shadow-lg">01</span>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-8 pt-4 flex-1 flex flex-col relative z-20">
+                        <h3 class="text-xl font-medium text-white mb-3 flex items-center gap-2">
+                            Strategy &amp; Positioning
+                            <iconify-icon icon="solar:route-linear" class="text-neutral-500 group-hover:text-orange-500 transition-colors"></iconify-icon>
+                        </h3>
+                        <p class="text-neutral-400 font-light leading-relaxed mb-6">
+                            We map out your unique positioning, define your audience avatar, and craft the high-level narrative that sets you apart.
+                        </p>
+
+                        <div class="border-t border-white/5 my-2"></div>
+                        
+                        <!-- Checklist -->
+                        <ul class="grid sm:grid-cols-2 gap-y-3 gap-x-4 mt-4">
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>Authority Brand Audit</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>Niche Identification</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>Audience Avatar Creation</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>High-Ticket Offer Design</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 2: Exposure -->
+                <div class="fade-up delay-200 group relative bg-neutral-900/40 border border-white/5 rounded-xl overflow-hidden hover:border-orange-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+                    <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-orange-500/50 transition-all duration-500"></div>
+                    
+                    <!-- Image Area -->
+                    <div class="relative h-56 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Exposure" class="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-700 grayscale group-hover:grayscale-0">
+                        
+                        <div class="absolute top-6 left-6 z-20">
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-neutral-950/80 border border-white/10 text-orange-500 text-sm font-mono backdrop-blur-sm shadow-lg">02</span>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-8 pt-4 flex-1 flex flex-col relative z-20">
+                        <h3 class="text-xl font-medium text-white mb-3 flex items-center gap-2">
+                            Content &amp; Exposure
+                            <iconify-icon icon="solar:camera-linear" class="text-neutral-500 group-hover:text-orange-500 transition-colors"></iconify-icon>
+                        </h3>
+                        <p class="text-neutral-400 font-light leading-relaxed mb-6">
+                            We create high-fidelity content assets—podcasts, articles, and video—that showcase your expertise to the world.
+                        </p>
+
+                        <div class="border-t border-white/5 my-2"></div>
+
+                        <!-- Checklist -->
+                        <ul class="grid sm:grid-cols-2 gap-y-3 gap-x-4 mt-4">
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>Podcast Production</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>Professional Photoshoots</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>Article Ghostwriting</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>Video Sales Letters (VSL)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 3: Automation and AI -->
+                <div class="fade-up delay-100 group relative bg-neutral-900/40 border border-white/5 rounded-xl overflow-hidden hover:border-orange-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+                    <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-orange-500/50 transition-all duration-500"></div>
+                    
+                    <!-- Image Area -->
+                    <div class="relative h-56 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="AI &amp; Automation" class="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-700 grayscale group-hover:grayscale-0">
+                        
+                        <div class="absolute top-6 left-6 z-20">
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-neutral-950/80 border border-white/10 text-orange-500 text-sm font-mono backdrop-blur-sm shadow-lg">03</span>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-8 pt-4 flex-1 flex flex-col relative z-20">
+                        <h3 class="text-xl font-medium text-white mb-3 flex items-center gap-2">
+                            Automation &amp; AI
+                            <iconify-icon icon="solar:cpu-bolt-linear" class="text-neutral-500 group-hover:text-orange-500 transition-colors"></iconify-icon>
+                        </h3>
+                        <p class="text-neutral-400 font-light leading-relaxed mb-6">
+                            Proprietary systems repurpose your core content into hundreds of micro-assets, maximizing reach with minimal effort.
+                        </p>
+
+                        <div class="border-t border-white/5 my-2"></div>
+
+                        <!-- Checklist -->
+                        <ul class="grid sm:grid-cols-2 gap-y-3 gap-x-4 mt-4">
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>AI Content Repurposing</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>Short-form Video Clipping</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>Automated Scheduling</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>Performance Dashboards</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 4: Distribution -->
+                <div class="fade-up delay-200 group relative bg-neutral-900/40 border border-white/5 rounded-xl overflow-hidden hover:border-orange-500/30 transition-all duration-300 flex flex-col h-full hover:shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+                    <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-orange-500/50 transition-all duration-500"></div>
+                    
+                    <!-- Image Area -->
+                    <div class="relative h-56 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Distribution" class="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-700 grayscale group-hover:grayscale-0">
+                        
+                        <div class="absolute top-6 left-6 z-20">
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-neutral-950/80 border border-white/10 text-orange-500 text-sm font-mono backdrop-blur-sm shadow-lg">04</span>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-8 pt-4 flex-1 flex flex-col relative z-20">
+                        <h3 class="text-xl font-medium text-white mb-3 flex items-center gap-2">
+                            Distribution &amp; Media
+                            <iconify-icon icon="solar:globus-linear" class="text-neutral-500 group-hover:text-orange-500 transition-colors"></iconify-icon>
+                        </h3>
+                        <p class="text-neutral-400 font-light leading-relaxed mb-6">
+                            We broadcast your message across major media networks, news outlets, and social channels to build omnipresence.
+                        </p>
+
+                        <div class="border-t border-white/5 my-2"></div>
+
+                        <!-- Checklist -->
+                        <ul class="grid sm:grid-cols-2 gap-y-3 gap-x-4 mt-4">
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>Press Release Distribution</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>Magazine Features</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>Podcast Guesting</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-sm text-neutral-400">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5 flex-shrink-0" width="16"></iconify-icon>
+                                <span>SEO Blog Optimization</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof & Outcomes Section -->
+    <section class="py-24 border-b border-white/5 bg-neutral-950 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-16 fade-up">
+                <h3 class="text-sm font-medium text-neutral-500 uppercase tracking-widest mb-2">Results That Speak Volumes</h3>
+                <h2 class="text-3xl lg:text-4xl font-medium text-white tracking-tight">Real Authority. Real Outcomes.</h2>
+            </div>
+
+            <!-- Logo Grid (Trusted Partners) -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center mb-24 opacity-60 fade-up delay-100">
+                <!-- Logos used as text/abstract representation to keep style pure -->
+                <div class="flex items-center gap-2 text-white/70 hover:text-white hover:opacity-100 transition-all cursor-default group">
+                    <iconify-icon icon="solar:layers-bold" width="24" class="group-hover:text-orange-500 transition-colors"></iconify-icon>
+                    <span class="font-bold tracking-tight text-lg">Acme Corp</span>
+                </div>
+                <div class="flex items-center gap-2 text-white/70 hover:text-white hover:opacity-100 transition-all cursor-default group">
+                    <iconify-icon icon="solar:infinity-bold" width="24" class="group-hover:text-orange-500 transition-colors"></iconify-icon>
+                    <span class="font-medium tracking-tight text-lg">Nexus</span>
+                </div>
+                <div class="flex items-center gap-2 text-white/70 hover:text-white hover:opacity-100 transition-all cursor-default group">
+                    <iconify-icon icon="solar:globus-bold" width="24" class="group-hover:text-orange-500 transition-colors"></iconify-icon>
+                    <span class="font-serif italic text-lg">Global</span>
+                </div>
+                <div class="flex items-center gap-2 text-white/70 hover:text-white hover:opacity-100 transition-all cursor-default group">
+                    <iconify-icon icon="solar:atom-bold" width="24" class="group-hover:text-orange-500 transition-colors"></iconify-icon>
+                    <span class="font-mono text-sm tracking-wider">QUANTUM</span>
+                </div>
+                <div class="flex items-center gap-2 text-white/70 hover:text-white hover:opacity-100 transition-all cursor-default group">
+                    <iconify-icon icon="solar:shield-bold" width="24" class="group-hover:text-orange-500 transition-colors"></iconify-icon>
+                    <span class="font-bold text-lg">SecureTech</span>
+                </div>
+                <div class="flex items-center gap-2 text-white/70 hover:text-white hover:opacity-100 transition-all cursor-default group">
+                    <iconify-icon icon="solar:bolt-bold" width="24" class="group-hover:text-orange-500 transition-colors"></iconify-icon>
+                    <span class="font-extrabold italic text-lg">VOLT</span>
+                </div>
+            </div>
+
+            <!-- Visual Showcase Grid (The Outcomes) -->
+            <div class="grid lg:grid-cols-3 gap-6">
+                
+                <!-- Card 1: Magazine Cover Outcome -->
+                <div class="fade-up delay-100 group relative rounded-2xl bg-neutral-900/40 border border-white/5 p-6 hover:border-white/10 transition-colors overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-40 transition-opacity">
+                         <iconify-icon icon="solar:book-2-linear" width="64"></iconify-icon>
+                    </div>
+                    
+                    <div class="relative z-10 flex flex-col h-full">
+                        <span class="text-xs font-medium text-orange-500 mb-4 flex items-center gap-1">
+                            <iconify-icon icon="solar:star-bold" width="12"></iconify-icon> Editorial Placement
+                        </span>
+                        <h4 class="text-lg font-medium text-white mb-2">Industry Authority Magazine</h4>
+                        <p class="text-sm text-neutral-400 mb-8">Clients featured on covers of premier industry publications.</p>
+                        
+                        <!-- Visual Mockup -->
+                        <div class="mt-auto flex justify-center">
+                            <div class="relative w-40 aspect-[3/4] bg-neutral-800 rounded-sm shadow-2xl transform group-hover:-translate-y-2 transition-transform duration-500 border-l border-t border-white/10 group-hover:shadow-orange-500/10">
+                                <!-- Magazine Content Mockup -->
+                                <div class="absolute inset-0 bg-gradient-to-br from-neutral-800 to-neutral-950 p-3 flex flex-col items-center">
+                                    <div class="w-full text-[10px] font-serif text-center text-white tracking-widest border-b border-white/20 pb-1 mb-2">AUTHORITY</div>
+                                    <div class="w-full h-24 bg-neutral-700/50 mb-2 overflow-hidden relative">
+                                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Cover" class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-500">
+                                    </div>
+                                    <div class="w-full space-y-1">
+                                        <div class="h-1 w-3/4 bg-white/40"></div>
+                                        <div class="h-1 w-1/2 bg-white/40"></div>
+                                        <div class="h-1 w-full bg-white/20 mt-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Podcast Feature Outcome -->
+                <div class="fade-up delay-200 group relative rounded-2xl bg-neutral-900/40 border border-white/5 p-6 hover:border-white/10 transition-colors overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-40 transition-opacity">
+                         <iconify-icon icon="solar:microphone-2-linear" width="64"></iconify-icon>
+                    </div>
+
+                    <div class="relative z-10 flex flex-col h-full">
+                        <span class="text-xs font-medium text-blue-400 mb-4 flex items-center gap-1">
+                            <iconify-icon icon="solar:play-circle-bold" width="12"></iconify-icon> Top 1% Podcast
+                        </span>
+                        <h4 class="text-lg font-medium text-white mb-2">The Executive Series</h4>
+                        <p class="text-sm text-neutral-400 mb-8">Deep-dive interviews distributed to Apple, Spotify &amp; Google.</p>
+                        
+                        <!-- Visual Mockup -->
+                        <div class="mt-auto">
+                            <div class="bg-neutral-950 border border-white/10 rounded-lg p-3 flex items-center gap-4 transform group-hover:scale-[1.02] transition-transform shadow-lg">
+                                <div class="w-12 h-12 bg-neutral-800 rounded relative overflow-hidden flex-shrink-0">
+                                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c543a9e1-f226-4ced-80b0-feb8445a75b9_1600w.jpg" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="h-1.5 w-1/2 bg-white/20 rounded mb-1.5"></div>
+                                    <div class="h-1.5 w-3/4 bg-white/10 rounded"></div>
+                                </div>
+                                <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:bg-blue-500/20 group-hover:border-blue-500/50 group-hover:text-blue-400 transition-colors">
+                                    <iconify-icon icon="solar:play-bold" width="12"></iconify-icon>
+                                </div>
+                            </div>
+                            <!-- Waveform decoration -->
+                            <div class="flex items-center justify-between gap-1 mt-4 h-6 px-2 opacity-30">
+                                <div class="w-1 bg-orange-500 h-2 rounded-full"></div>
+                                <div class="w-1 bg-orange-500 h-4 rounded-full animate-pulse"></div>
+                                <div class="w-1 bg-orange-500 h-6 rounded-full"></div>
+                                <div class="w-1 bg-orange-500 h-3 rounded-full"></div>
+                                <div class="w-1 bg-orange-500 h-5 rounded-full animate-pulse"></div>
+                                <div class="w-1 bg-orange-500 h-2 rounded-full"></div>
+                                <div class="w-1 bg-orange-500 h-4 rounded-full"></div>
+                                <div class="w-1 bg-orange-500 h-6 rounded-full animate-pulse"></div>
+                                <div class="w-1 bg-orange-500 h-3 rounded-full"></div>
+                                <div class="w-1 bg-orange-500 h-2 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Feature Article -->
+                <div class="fade-up delay-300 group relative rounded-2xl bg-neutral-900/40 border border-white/5 p-6 hover:border-white/10 transition-colors overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-40 transition-opacity">
+                         <iconify-icon icon="solar:document-text-linear" width="64"></iconify-icon>
+                    </div>
+
+                    <div class="relative z-10 flex flex-col h-full">
+                        <span class="text-xs font-medium text-green-400 mb-4 flex items-center gap-1">
+                            <iconify-icon icon="solar:check-read-bold" width="12"></iconify-icon> Tier 1 Press
+                        </span>
+                        <h4 class="text-lg font-medium text-white mb-2">Featured Expert Articles</h4>
+                        <p class="text-sm text-neutral-400 mb-8">Opinion pieces and expert commentary in major outlets.</p>
+                        
+                        <!-- Visual Mockup -->
+                        <div class="mt-auto">
+                            <div class="bg-white text-black p-4 rounded shadow-xl transform rotate-1 group-hover:rotate-0 transition-transform duration-500 h-40 overflow-hidden relative">
+                                <div class="flex items-center gap-2 mb-3 border-b border-black/10 pb-2">
+                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                    <div class="text-[8px] font-bold uppercase tracking-wider text-neutral-500">Breaking News</div>
+                                </div>
+                                <div class="font-serif text-lg font-bold leading-tight mb-2">
+                                    Why Authority Marketing is the New Standard
+                                </div>
+                                <div class="space-y-1">
+                                    <div class="h-1 w-full bg-neutral-200"></div>
+                                    <div class="h-1 w-full bg-neutral-200"></div>
+                                    <div class="h-1 w-2/3 bg-neutral-200"></div>
+                                </div>
+                                <div class="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-white to-transparent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Testimonials -->
+    <section class="py-24 border-b border-white/5 bg-neutral-900/20">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center mb-16 fade-up">
+                <h3 class="text-sm font-medium text-neutral-500 uppercase tracking-widest mb-2">Wall of Love</h3>
+                <h2 class="text-3xl lg:text-4xl font-medium text-white tracking-tight">What Industry Leaders Are Saying</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="fade-up delay-100 flex flex-col p-8 rounded-xl bg-neutral-900/30 border border-white/5 relative group hover:border-orange-500/20 transition-all">
+                    <div class="absolute top-8 right-8 text-neutral-800 group-hover:text-orange-900/40 transition-colors">
+                        <iconify-icon icon="solar:quote-up-bold" width="48"></iconify-icon>
+                    </div>
+                    
+                    <div class="flex gap-1 text-orange-500 mb-6 text-xs">
+                        <iconify-icon icon="solar:star-bold"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold"></iconify-icon>
+                    </div>
+
+                    <p class="font-serif text-lg text-neutral-300 italic mb-8 relative z-10 leading-relaxed">
+                        "The ROI was immediate. Before working with AMN, I was just another consultant. Now, I'm the authority my prospects reference during our first call."
+                    </p>
+
+                    <div class="mt-auto flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-neutral-800 border border-white/10 overflow-hidden">
+                            <img src="https://i.pravatar.cc/150?img=68" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium text-white">Sarah Jenkins</div>
+                            <div class="text-xs text-neutral-500">Founder, Apex Consulting</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="fade-up delay-200 flex flex-col p-8 rounded-xl bg-neutral-900/30 border border-white/5 relative group hover:border-orange-500/20 transition-all">
+                    <div class="absolute top-8 right-8 text-neutral-800 group-hover:text-orange-900/40 transition-colors">
+                        <iconify-icon icon="solar:quote-up-bold" width="48"></iconify-icon>
+                    </div>
+                    
+                    <div class="flex gap-1 text-orange-500 mb-6 text-xs">
+                        <iconify-icon icon="solar:star-bold"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold"></iconify-icon>
+                    </div>
+
+                    <p class="font-serif text-lg text-neutral-300 italic mb-8 relative z-10 leading-relaxed">
+                        "Finally, a strategy that separates us from the noise. The editorial magazine they produced for us has become our most powerful sales asset by far."
+                    </p>
+
+                    <div class="mt-auto flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-neutral-800 border border-white/10 overflow-hidden">
+                            <img src="https://i.pravatar.cc/150?img=15" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium text-white">David Ross</div>
+                            <div class="text-xs text-neutral-500">CEO, Ross Capital</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="fade-up delay-300 flex flex-col p-8 rounded-xl bg-neutral-900/30 border border-white/5 relative group hover:border-orange-500/20 transition-all">
+                    <div class="absolute top-8 right-8 text-neutral-800 group-hover:text-orange-900/40 transition-colors">
+                        <iconify-icon icon="solar:quote-up-bold" width="48"></iconify-icon>
+                    </div>
+                    
+                    <div class="flex gap-1 text-orange-500 mb-6 text-xs">
+                        <iconify-icon icon="solar:star-bold"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold"></iconify-icon>
+                        <iconify-icon icon="solar:star-bold"></iconify-icon>
+                    </div>
+
+                    <p class="font-serif text-lg text-neutral-300 italic mb-8 relative z-10 leading-relaxed">
+                        "My personal brand is now my business's biggest asset. The podcast series AMN produced opened doors to partnerships I couldn't access before."
+                    </p>
+
+                    <div class="mt-auto flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-neutral-800 border border-white/10 overflow-hidden">
+                            <img src="https://i.pravatar.cc/150?img=44" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium text-white">Elena Rodriguez</div>
+                            <div class="text-xs text-neutral-500">Author &amp; Speaker</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Footer -->
+    <footer class="bg-neutral-950 pt-20 pb-10 border-t border-white/5 font-sans relative">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-orange-900/5 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            
+            <!-- Newsletter Section -->
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-16 border-b border-white/5">
+                <div class="max-w-lg">
+                    <h3 class="text-xl font-medium text-white mb-2">Subscribe to our intelligence briefing.</h3>
+                    <p class="text-sm text-neutral-400 font-light">Join 10,000+ leaders receiving weekly insights on authority marketing and media strategy.</p>
+                </div>
+                
+                <form class="flex w-full md:w-auto gap-2">
+                    <input type="email" placeholder="Enter your email" class="w-full md:w-64 bg-neutral-900 border border-white/10 rounded-md px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-orange-500 transition-colors">
+                    <button type="button" class="bg-orange-600 text-white px-6 py-3 rounded-md text-sm font-medium hover:bg-orange-500 transition-colors shadow-[0_0_15px_rgba(234,88,12,0.2)]">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+
+            <!-- Main Footer Links -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-12 pt-16 pb-12">
+                
+                <!-- Brand Column -->
+                <div class="col-span-2 lg:col-span-4 flex flex-col gap-6 pr-8">
+                    <a href="#" class="text-white font-medium tracking-tighter text-2xl uppercase hover:text-orange-500 transition-colors">
+                        AMN.
+                    </a>
+                    <p class="text-sm text-neutral-500 font-light leading-relaxed max-w-sm">
+                        Authority Media Network transforms experts into industry icons. We build, manage, and scale your personal brand ecosystem through premium media assets.
+                    </p>
+                    <div class="flex items-center gap-2 text-xs text-neutral-600 mt-auto">
+                        <div class="flex items-center gap-1">
+                            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                            <span>Systems Operational</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Link Column 1: Company -->
+                <div class="col-span-1 lg:col-span-2">
+                    <h4 class="text-white font-medium mb-6">Company</h4>
+                    <ul class="flex flex-col gap-4 text-sm font-light text-neutral-400">
+                        <li><a href="#about" class="hover:text-orange-500 transition-colors">About Us</a></li>
+                        <li><a href="#blueprint" class="hover:text-orange-500 transition-colors">The Blueprint</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Success Stories</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Link Column 2: Solutions -->
+                <div class="col-span-1 lg:col-span-2">
+                    <h4 class="text-white font-medium mb-6">Solutions</h4>
+                    <ul class="flex flex-col gap-4 text-sm font-light text-neutral-400">
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Brand Strategy</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Podcasting</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Editorial Magazines</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Public Relations</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Content Distribution</a></li>
+                    </ul>
+                </div>
+
+                <!-- Link Column 3: Connect & Legal -->
+                <div class="col-span-2 lg:col-span-4 grid grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-white font-medium mb-6">Legal</h4>
+                        <ul class="flex flex-col gap-4 text-sm font-light text-neutral-400">
+                            <li><a href="#" class="hover:text-orange-500 transition-colors">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-orange-500 transition-colors">Terms of Service</a></li>
+                            <li><a href="#" class="hover:text-orange-500 transition-colors">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-white font-medium mb-6">Connect</h4>
+                        <ul class="flex flex-col gap-4 text-sm font-light text-neutral-400">
+                            <li class="flex items-center gap-2 group cursor-pointer">
+                                <iconify-icon icon="solar:letter-linear" class="group-hover:text-orange-500 transition-colors"></iconify-icon>
+                                <span class="group-hover:text-white transition-colors">hello@amn.media</span>
+                            </li>
+                            <li class="flex items-center gap-2 group cursor-pointer">
+                                <iconify-icon icon="solar:map-point-linear" class="group-hover:text-orange-500 transition-colors"></iconify-icon>
+                                <span class="group-hover:text-white transition-colors">New York, NY</span>
+                            </li>
+                        </ul>
+
+                        <!-- Social Icons -->
+                        <div class="flex gap-4 mt-8">
+                            <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300">
+                                <iconify-icon icon="ri:facebook-line" width="20"></iconify-icon>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300">
+                                <iconify-icon icon="ri:instagram-line" width="20"></iconify-icon>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300">
+                                <iconify-icon icon="ri:linkedin-line" width="20"></iconify-icon>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300">
+                                <iconify-icon icon="ri:youtube-line" width="20"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-white/5 text-xs text-neutral-600">
+                <p>© 2024 Authority Media Network. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-orange-500 transition-colors">Sitemap</a>
+                    <a href="#" class="hover:text-orange-500 transition-colors">Accessibility</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            
+            if (menu.classList.contains('opacity-0')) {
+                // Open
+                menu.classList.remove('opacity-0', 'pointer-events-none');
+                menu.classList.add('opacity-100', 'pointer-events-auto');
+                icon.setAttribute('icon', 'solar:close-circle-linear');
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Close
+                menu.classList.remove('opacity-100', 'pointer-events-auto');
+                menu.classList.add('opacity-0', 'pointer-events-none');
+                icon.setAttribute('icon', 'solar:hamburger-menu-linear');
+                document.body.style.overflow = 'auto';
+            }
+        }
+        
+        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMenu);
+
+        // Intersection Observer for Fade-Up Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-up');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
+
+
+</body></html>

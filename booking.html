@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Blueprint Call — Authority Media Network</title>
+    <meta name="description" content="Schedule your free 30-minute Authority Blueprint Strategy Call. Get a custom roadmap to 10x your authority and brand positioning.">
+    <meta property="og:title" content="Book Your Blueprint Call — Authority Media Network">
+    <meta property="og:description" content="Schedule your free 30-minute strategy session. Get a custom roadmap for your brand positioning.">
+    <meta property="og:type" content="website">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="bg-neutral-950 text-neutral-400 antialiased selection:bg-orange-500/20 selection:text-orange-200 min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="z-50 relative group"><img src="/authority-media-network-navbar-logo.svg" alt="Authority Media Network" class="h-8 md:h-10 w-auto transition-opacity group-hover:opacity-80"></a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-normal">
+                <a href="/about.html" class="hover:text-white transition-colors duration-200">About</a>
+                <a href="/podcast.html" class="hover:text-white transition-colors duration-200">Podcast</a>
+                <a href="/authority.html" class="hover:text-white transition-colors duration-200">Authority</a>
+                <a href="/media.html" class="hover:text-white transition-colors duration-200">Media</a>
+            </div>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="/blueprint.html" class="text-xs font-medium text-neutral-500 hover:text-white transition-colors flex items-center gap-2">
+                    <iconify-icon icon="solar:arrow-left-linear"></iconify-icon>
+                    Back to Blueprint
+                </a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-white hover:text-orange-500 transition-colors z-50 relative" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24" id="menu-icon"></iconify-icon>
+            </button>
+        </div>
+        <div id="mobile-menu" class="md:hidden flex flex-col gap-2 bg-neutral-950 border-t border-white/5 px-6 py-4" role="navigation" aria-label="Mobile navigation">
+            <a href="/about.html" class="text-lg font-light text-white hover:text-orange-500 py-2 transition-colors" onclick="toggleMenu()">About</a>
+            <a href="/podcast.html" class="text-lg font-light text-white hover:text-orange-500 py-2 transition-colors" onclick="toggleMenu()">Podcast</a>
+            <a href="/authority.html" class="text-lg font-light text-white hover:text-orange-500 py-2 transition-colors" onclick="toggleMenu()">Authority</a>
+            <a href="/media.html" class="text-lg font-light text-white hover:text-orange-500 py-2 transition-colors" onclick="toggleMenu()">Media</a>
+            <a href="/blueprint.html" class="mt-2 px-6 py-3 bg-orange-600 text-white rounded text-sm font-medium text-center hover:bg-orange-500 transition-all shadow-[0_0_15px_rgba(234,88,12,0.3)]" onclick="toggleMenu()">View Blueprint</a>
+        </div>
+    </nav>
+
+    <!-- Main Booking Section -->
+    <main class="flex-grow flex items-center justify-center pt-28 pb-12 lg:pt-32 lg:pb-20 px-4 sm:px-6 relative overflow-hidden">
+        <!-- Background Glows -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-900/10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-6xl w-full mx-auto grid lg:grid-cols-12 gap-8 lg:gap-16 items-start relative z-10">
+
+            <!-- Left Column: Value Proposition & Details -->
+            <div class="lg:col-span-5 fade-up">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/20 bg-orange-500/5 mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                    </span>
+                    <span class="text-xs font-medium text-orange-500 tracking-wide uppercase">Limited Availability</span>
+                </div>
+
+                <h1 class="text-3xl lg:text-4xl font-medium text-white tracking-tight mb-4">
+                    Authority Blueprint <span class="font-serif italic text-neutral-500">Strategy Call</span>
+                </h1>
+
+                <p class="text-neutral-400 font-light text-lg mb-8 leading-relaxed">
+                    This isn't a sales pitch. It's a diagnostic session to map out your path from expert to authority.
+                </p>
+
+                <div class="space-y-6 mb-10">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-neutral-900 border border-white/10 flex items-center justify-center text-white flex-shrink-0">
+                            <iconify-icon icon="solar:clock-circle-bold" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-medium text-sm">30 Minutes</h3>
+                            <p class="text-xs text-neutral-500 mt-1">Focused strategy session via Zoom.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-neutral-900 border border-white/10 flex items-center justify-center text-white flex-shrink-0">
+                            <iconify-icon icon="solar:chart-2-bold" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-medium text-sm">Positioning Audit</h3>
+                            <p class="text-xs text-neutral-500 mt-1">We'll review your current digital footprint and identify gaps.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-neutral-900 border border-white/10 flex items-center justify-center text-white flex-shrink-0">
+                            <iconify-icon icon="solar:map-point-bold" width="20"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-medium text-sm">Custom Roadmap</h3>
+                            <p class="text-xs text-neutral-500 mt-1">Walk away with a 4-step plan to 10x your authority.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trusted By / Social Proof -->
+                <div class="pt-8 border-t border-white/5">
+                    <p class="text-xs font-medium text-neutral-600 uppercase tracking-widest mb-4">Trusted by founders from</p>
+                    <div class="flex flex-wrap gap-6 opacity-40 grayscale">
+                         <span class="text-sm font-serif italic text-white">Franklin Planner</span>
+                         <span class="text-sm font-sans font-bold text-white">More Than Teeth</span>
+                         <span class="text-sm font-bold text-white tracking-tight">PlatPay</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: GoHighLevel Calendar Embed -->
+            <div class="lg:col-span-7 fade-up delay-100">
+                <div class="bg-neutral-900/80 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden min-h-[500px]">
+                    <iframe src="https://link.authoritymedianetwork.com/widget/booking/4yjXNv9ViqShv0Sb5gOg" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="4yjXNv9ViqShv0Sb5gOg_1770574365883"></iframe>
+                    <script src="https://link.authoritymedianetwork.com/js/form_embed.js" type="text/javascript"></script>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Preparation Section -->
+    <section class="border-t border-white/5 bg-neutral-900/30 py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-medium text-white mb-12">What happens next?</h2>
+
+            <div class="grid md:grid-cols-3 gap-8 text-left relative">
+                <!-- Connecting Line -->
+                <div class="hidden md:block absolute top-6 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+                <div class="relative z-10">
+                    <div class="w-12 h-12 bg-neutral-950 border border-white/10 rounded-full flex items-center justify-center text-orange-500 mb-6 mx-auto md:mx-0 shadow-lg shadow-orange-900/10">
+                        <span class="font-mono font-bold">01</span>
+                    </div>
+                    <h3 class="text-white font-medium mb-2 text-center md:text-left">Preparation</h3>
+                    <p class="text-sm text-neutral-500 leading-relaxed text-center md:text-left">We'll send you a brief questionnaire to understand your current brand status before we meet.</p>
+                </div>
+
+                <div class="relative z-10">
+                    <div class="w-12 h-12 bg-neutral-950 border border-white/10 rounded-full flex items-center justify-center text-white mb-6 mx-auto md:mx-0">
+                        <span class="font-mono font-bold">02</span>
+                    </div>
+                    <h3 class="text-white font-medium mb-2 text-center md:text-left">The Blueprint</h3>
+                    <p class="text-sm text-neutral-500 leading-relaxed text-center md:text-left">During the call, we map out the "Contact, Capture, Convert" strategy specifically for your niche.</p>
+                </div>
+
+                <div class="relative z-10">
+                    <div class="w-12 h-12 bg-neutral-950 border border-white/10 rounded-full flex items-center justify-center text-white mb-6 mx-auto md:mx-0">
+                        <span class="font-mono font-bold">03</span>
+                    </div>
+                    <h3 class="text-white font-medium mb-2 text-center md:text-left">Execution</h3>
+                    <p class="text-sm text-neutral-500 leading-relaxed text-center md:text-left">You receive the recording and the roadmap. If we're a good fit, we discuss partnership.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-950 pt-20 pb-10 border-t border-white/5 font-sans relative">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-orange-900/5 blur-[100px] rounded-full pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-16 border-b border-white/5">
+                <div class="max-w-lg">
+                    <h3 class="text-xl font-medium text-white mb-2">Subscribe to our newsletter.</h3>
+                    <p class="text-sm text-neutral-400 font-light">Join 10,000+ leaders receiving weekly insights on authority marketing and media strategy.</p>
+                </div>
+                <form class="flex w-full md:w-auto gap-2">
+                    <input type="email" placeholder="Enter your email" class="w-full md:w-64 bg-neutral-900 border border-white/10 rounded-md px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-orange-500 transition-colors">
+                    <button type="button" class="bg-orange-600 text-white px-6 py-3 rounded-md text-sm font-medium hover:bg-orange-500 transition-colors shadow-[0_0_15px_rgba(234,88,12,0.2)]">Subscribe</button>
+                </form>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-12 pt-16 pb-12">
+                <div class="col-span-2 lg:col-span-4 flex flex-col gap-6 pr-8">
+                    <a href="/" class="group"><img src="/authority-media-network-navbar-logo.svg" alt="Authority Media Network" class="h-8 md:h-10 w-auto transition-opacity group-hover:opacity-80"></a>
+                    <p class="text-sm text-neutral-500 font-light leading-relaxed max-w-sm">Authority Media Network transforms experts into industry icons. We build, manage, and scale your personal brand ecosystem through premium media assets.</p>
+                    <div class="flex items-center gap-2 text-xs text-neutral-600 mt-auto"><div class="flex items-center gap-1"><div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div><span>Systems Operational</span></div></div>
+                </div>
+                <div class="col-span-1 lg:col-span-2">
+                    <h4 class="text-white font-medium mb-6">Company</h4>
+                    <ul class="flex flex-col gap-4 text-sm font-light text-neutral-400">
+                        <li><a href="/" class="hover:text-orange-500 transition-colors">Home</a></li>
+                        <li><a href="/about.html" class="hover:text-orange-500 transition-colors">About</a></li>
+                        <li><a href="/podcast.html" class="hover:text-orange-500 transition-colors">Podcast</a></li>
+                        <li><a href="/authority.html" class="hover:text-orange-500 transition-colors">Authority</a></li>
+                        <li><a href="/media.html" class="hover:text-orange-500 transition-colors">Media</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-1 lg:col-span-2">
+                    <h4 class="text-white font-medium mb-6">Solutions</h4>
+                    <ul class="flex flex-col gap-4 text-sm font-light text-neutral-400">
+                        <li><a href="/guest.html" class="hover:text-orange-500 transition-colors">Guests</a></li>
+                        <li><a href="https://valiantceo.com/" class="hover:text-orange-500 transition-colors">ValiantCEO</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2 lg:col-span-4 grid grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-white font-medium mb-6">Legal</h4>
+                        <ul class="flex flex-col gap-4 text-sm font-light text-neutral-400">
+                            <li><a href="#" class="hover:text-orange-500 transition-colors">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-orange-500 transition-colors">Terms of Service</a></li>
+                            <li><a href="#" class="hover:text-orange-500 transition-colors">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium mb-6">Connect</h4>
+                        <ul class="flex flex-col gap-4 text-sm font-light text-neutral-400">
+                            <li class="flex items-center gap-2 group cursor-pointer"><iconify-icon icon="solar:letter-linear" class="group-hover:text-orange-500 transition-colors"></iconify-icon><span class="group-hover:text-white transition-colors">hello@amn.media</span></li>
+                            <li class="flex items-center gap-2 group cursor-pointer"><iconify-icon icon="solar:map-point-linear" class="group-hover:text-orange-500 transition-colors"></iconify-icon><span class="group-hover:text-white transition-colors">New York, NY</span></li>
+                        </ul>
+                        <div class="flex gap-4 mt-8">
+                            <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300"><iconify-icon icon="ri:facebook-line" width="20"></iconify-icon></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300"><iconify-icon icon="ri:instagram-line" width="20"></iconify-icon></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300"><iconify-icon icon="ri:linkedin-line" width="20"></iconify-icon></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-neutral-900 border border-white/5 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-orange-600 hover:border-orange-500 transition-all duration-300"><iconify-icon icon="ri:youtube-line" width="20"></iconify-icon></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-white/5 text-xs text-neutral-600">
+                <p>&copy; 2024 Authority Media Network. All rights reserved.</p>
+                <div class="flex items-center gap-6"><a href="#" class="hover:text-orange-500 transition-colors">Sitemap</a><a href="#" class="hover:text-orange-500 transition-colors">Accessibility</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
