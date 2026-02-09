@@ -333,6 +333,10 @@ function observeFadeUps() {
 document.addEventListener('DOMContentLoaded', () => {
   observeFadeUps()
 
+  // ─── Dynamic Copyright Year ───
+  const yearEl = document.getElementById('copyright-year')
+  if (yearEl) yearEl.textContent = new Date().getFullYear()
+
   // ─── Mobile Menu: wire up button click ───
   const menuBtn = document.getElementById('mobile-menu-btn')
   if (menuBtn) menuBtn.addEventListener('click', toggleMenu)
